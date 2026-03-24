@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CAIH &mdash; Salvador Roka &middot; Eti&oacute;logo y Especialista en Optimizaci&oacute;n Celular</title>
+<meta name="description" content="No tratamos enfermedades. Dise&ntilde;amos contextos biol&oacute;gicos. Salvador Roka, eti&oacute;logo y especialista en optimizaci&oacute;n celular.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --ink:#050C07;--ink2:#0A1410;--ink3:#092E1E;
+  --gold:#E8B84B;--gold2:#F5CE6A;
+  --teal:#0D7A4E;--teal2:#00C873;
+  --white:#fdfcf8;--surf:#f5f2eb;
+  --serif:Georgia,'Times New Roman',serif;
+  --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--surf);font-family:var(--sans);font-size:16px;line-height:1.6;overflow-x:hidden}
+
+
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:20px 48px;display:flex;align-items:center;justify-content:space-between;transition:all .35s}
+nav.sc{background:rgba(11,11,9,.96);backdrop-filter:blur(12px);padding:14px 48px;border-bottom:1px solid rgba(232,184,75,.12)}
+.nl{font-family:var(--serif);font-size:24px;color:var(--white);text-decoration:none;display:flex;align-items:center;gap:4px}
+.nl em{color:var(--gold);font-style:italic}
+.nv{display:flex;gap:30px;list-style:none}
+.nv a{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,248,235,.75);text-decoration:none;transition:color .2s}
+.nv a:hover{color:var(--gold)}
+.nc{font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;padding:10px 22px;border:1px solid var(--gold);color:var(--gold);background:transparent;cursor:pointer;transition:all .2s;font-family:var(--sans)}
+.nc:hover{background:var(--gold);color:var(--ink)}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 48px 80px;position:relative;overflow:hidden}
+.hbg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 70% 40%,rgba(13,122,78,.18) 0%,transparent 60%),radial-gradient(ellipse 40% 40% at 20% 80%,rgba(232,184,75,.08) 0%,transparent 50%)}
+.hnum{position:absolute;top:120px;right:48px;font-family:var(--serif);font-size:clamp(100px,15vw,190px);color:rgba(245,242,235,.03);line-height:1;user-select:none}
+.htag{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:22px;font-weight:700}
+.ht{font-family:var(--serif);font-size:clamp(46px,7vw,88px);line-height:1.06;letter-spacing:-.01em;max-width:740px}
+.ht em{font-style:italic;color:var(--gold2)}
+.hs{margin-top:26px;max-width:480px;font-size:17px;line-height:1.75;color:rgba(255,248,235,.82);font-family:var(--serif);font-style:italic}
+.ha{margin-top:42px;display:flex;gap:14px;flex-wrap:wrap}
+.hscr{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:7px}
+.sln{width:1px;height:48px;background:linear-gradient(to bottom,transparent,rgba(232,184,75,.5))}
+.stx{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(245,242,235,.32)}
+
+/* BUTTONS */
+.bp{font-size:13px;letter-spacing:.09em;text-transform:uppercase;font-weight:700;padding:15px 32px;background:var(--teal);color:var(--white);border:none;cursor:pointer;font-family:var(--sans);display:inline-block;text-decoration:none;transition:background .2s}
+.bp:hover{background:var(--teal2)}
+.bs{font-size:13px;letter-spacing:.09em;text-transform:uppercase;padding:15px 32px;color:rgba(245,242,235,.65);border:1px solid rgba(245,242,235,.2);display:inline-block;text-decoration:none;transition:all .2s;font-family:var(--sans)}
+.bs:hover{color:var(--white);border-color:rgba(255,248,235,.72)}
+.bg2{font-size:13px;letter-spacing:.09em;text-transform:uppercase;font-weight:700;padding:15px 32px;background:var(--gold);color:var(--ink);border:none;cursor:pointer;font-family:var(--sans);display:inline-block;text-decoration:none;transition:background .2s}
+.bg2:hover{background:var(--gold2)}
+.bog{font-size:13px;letter-spacing:.09em;text-transform:uppercase;padding:15px 32px;color:var(--gold);border:1px solid rgba(232,184,75,.4);display:inline-block;text-decoration:none;transition:all .2s;font-family:var(--sans)}
+.bog:hover{border-color:var(--gold);background:rgba(232,184,75,.08)}
+.wbtn{display:block;text-align:center;padding:13px;background:var(--teal);color:var(--white);text-decoration:none;font-family:var(--sans);font-size:12px;letter-spacing:.09em;text-transform:uppercase;font-weight:700;transition:background .2s}
+.wbtn:hover{background:var(--teal2)}
+.wbtn-g{display:block;text-align:center;padding:12px;background:rgba(232,184,75,.1);color:var(--gold);text-decoration:none;font-family:var(--sans);font-size:12px;letter-spacing:.09em;text-transform:uppercase;font-weight:700;border:1px solid rgba(232,184,75,.3);transition:all .2s}
+.wbtn-g:hover{background:rgba(232,184,75,.2)}
+
+/* SECTIONS */
+section{padding:100px 48px}
+.inn{max-width:1060px;margin:0 auto}
+.stag{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#E8B84B;font-weight:700;margin-bottom:16px}
+.stit{font-family:var(--serif);font-size:clamp(32px,4.5vw,56px);line-height:1.12;letter-spacing:-.01em}
+.stit em{font-style:italic;color:var(--gold2)}
+.sbod{font-size:17px;line-height:1.75;color:rgba(255,248,235,.85);font-family:var(--serif);max-width:600px}
+.dv{width:44px;height:1px;background:var(--gold);margin:24px 0;opacity:.5}
+
+/* MANIFESTO */
+.mf{background:var(--ink2);border-top:1px solid rgba(232,184,75,.08);border-bottom:1px solid rgba(232,184,75,.08)}
+.mfg{display:grid;grid-template-columns:1fr 1fr;gap:80px}
+.mqw{display:flex;flex-direction:column;gap:30px;padding-top:6px}
+.mq{border-left:2px solid rgba(232,184,75,.28);padding-left:22px;transition:border-color .3s}
+.mq:hover{border-left-color:var(--gold)}
+.mq p{font-family:var(--serif);font-size:18px;font-style:italic;line-height:1.62;color:rgba(245,242,235,.82)}
+.mq cite{display:block;margin-top:8px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-style:normal;font-family:var(--sans)}
+
+/* LAYERS */
+.sysh{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-bottom:50px;align-items:end}
+.lfl{display:flex;flex-direction:column;position:relative}
+.lfl::before{content:'';position:absolute;left:23px;top:22px;bottom:22px;width:1px;background:linear-gradient(to bottom,var(--teal2),rgba(232,184,75,.4),rgba(196,48,48,.4))}
+.lr{display:grid;grid-template-columns:48px 1fr auto;align-items:center;gap:20px;padding:16px 0;border-bottom:1px solid rgba(245,242,235,.07);position:relative;z-index:1;transition:background .2s}
+.lr:last-child{border-bottom:none}
+.lr:hover{background:rgba(245,242,235,.02)}
+.lnu{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:17px;position:relative;z-index:2;transition:transform .2s}
+.lr:hover .lnu{transform:scale(1.08)}
+.lr:nth-child(1) .lnu,.lr:nth-child(2) .lnu{background:rgba(0,200,115,.14);border:1px solid rgba(0,200,115,.35);color:#00E87C}
+.lr:nth-child(3) .lnu{background:rgba(232,184,75,.1);border:1px solid rgba(232,184,75,.3);color:var(--gold2)}
+.lr:nth-child(4) .lnu{background:rgba(232,184,75,.07);border:1px solid rgba(232,184,75,.18);color:var(--gold)}
+.lr:nth-child(5) .lnu{background:rgba(196,48,48,.1);border:1px solid rgba(196,48,48,.25);color:#FF5050}
+.lnm{font-family:var(--serif);font-size:20px;margin-bottom:3px}
+.ldc{font-size:13px;color:rgba(245,242,235,.42);line-height:1.5}
+.lr:nth-child(5) .lnm{color:#FFA090}
+.ltgs{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.ltg{font-size:10px;letter-spacing:.07em;text-transform:uppercase;padding:3px 9px;border:1px solid rgba(245,242,235,.1);color:rgba(245,242,235,.35)}
+
+/* STATS */
+.stats{background:var(--ink3);padding:68px 48px;border-top:1px solid rgba(13,122,78,.3);border-bottom:1px solid rgba(13,122,78,.3)}
+.stg2{max-width:1060px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:36px}
+.si{text-align:center}
+.sn{font-family:var(--serif);font-size:clamp(42px,5vw,64px);color:var(--white);line-height:1;letter-spacing:-.02em}
+.sn em{color:var(--gold);font-style:italic}
+.sl{margin-top:8px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(245,242,235,.45)}
+.sd{margin-top:5px;font-size:13px;font-family:var(--serif);font-style:italic;color:rgba(245,242,235,.48)}
+
+/* METHOD */
+.mths{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(245,242,235,.06);margin-top:52px}
+.sc2{background:var(--ink);padding:28px 20px;position:relative;border-top:2px solid transparent;transition:border-color .35s,background .25s}
+.sc2:hover{border-top-color:var(--teal);background:rgba(13,122,78,.04)}
+.scp{font-family:var(--serif);font-size:48px;color:rgba(245,242,235,.05);line-height:1;margin-bottom:14px}
+.sct{font-family:var(--serif);font-size:17px;margin-bottom:9px}
+.scd{font-size:13px;color:rgba(245,242,235,.44);line-height:1.62}
+
+/* CEO */
+.ceo{background:var(--ink3);border-top:1px solid rgba(13,122,78,.35);border-bottom:1px solid rgba(13,122,78,.35)}
+.ceoi{max-width:1060px;margin:0 auto;display:grid;grid-template-columns:280px 1fr;gap:70px;align-items:start}
+.cpfr{width:100%;aspect-ratio:3/4;background:rgba(13,122,78,.12);border:1px solid rgba(13,122,78,.3);display:flex;align-items:center;justify-content:center;position:relative}
+.cpi{font-family:var(--serif);font-size:96px;color:rgba(245,242,235,.06);letter-spacing:-.02em}
+.cpl{position:absolute;bottom:0;left:0;right:0;padding:16px;border-top:1px solid rgba(13,122,78,.2)}
+.cpn{font-family:var(--serif);font-size:17px;color:var(--white)}
+.cpr{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#00E87C;margin-top:4px}
+.ceo-intro{font-family:var(--serif);font-size:clamp(18px,2.2vw,26px);line-height:1.45;font-style:italic;color:rgba(245,242,235,.9);margin-bottom:28px;border-left:2px solid var(--teal2);padding-left:22px}
+.ceo-body{display:flex;flex-direction:column;gap:16px}
+.ceo-body p{font-family:var(--serif);font-size:17px;line-height:1.75;color:rgba(245,242,235,.7)}
+.ceo-body strong{color:rgba(245,242,235,.9);font-weight:400;font-style:italic}
+
+/* PROGRAMS */
+.prog{background:var(--ink2)}
+.prgh{max-width:1060px;margin:0 auto 46px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end}
+.prgg{max-width:1060px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(245,242,235,.07)}
+.pc{background:var(--ink2);padding:34px 28px;transition:background .25s,transform .25s}
+.pc:hover{background:rgba(13,122,78,.07);transform:translateY(-2px)}
+.pci{width:36px;height:36px;border:1px solid rgba(232,184,75,.3);display:flex;align-items:center;justify-content:center;margin-bottom:18px;transition:border-color .2s}
+.pc:hover .pci{border-color:var(--gold)}
+.pci svg{width:16px;height:16px;stroke:var(--gold);fill:none;stroke-width:1.5}
+.pcn{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);margin-bottom:9px;font-weight:700}
+.pct{font-family:var(--serif);font-size:20px;line-height:1.2;margin-bottom:10px}
+.pprice{font-family:var(--serif);font-size:38px;color:var(--white);margin:10px 0 2px;letter-spacing:-.01em;line-height:1}
+.pprice em{font-size:15px;color:var(--gold);font-style:italic}
+.psub{font-size:11px;color:rgba(245,242,235,.32);letter-spacing:.07em;text-transform:uppercase;margin-bottom:12px}
+.pcd{font-size:14px;color:rgba(245,242,235,.52);line-height:1.65;margin-bottom:13px}
+.pctg{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+.ptg{font-size:10px;letter-spacing:.07em;text-transform:uppercase;padding:3px 9px;background:rgba(245,242,235,.04);color:rgba(245,242,235,.38);border:1px solid rgba(245,242,235,.1)}
+
+/* TESTIMONIALS */
+.tes{background:var(--ink2);padding:100px 48px}
+.tcg{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:46px}
+.tc{padding:28px;border:1px solid rgba(245,242,235,.09);position:relative;transition:border-color .25s}
+.tc:hover{border-color:rgba(232,184,75,.25)}
+.tc::before{content:'\201C';font-family:var(--serif);font-size:64px;line-height:1;color:rgba(232,184,75,.17);position:absolute;top:14px;left:22px}
+.tt{font-family:var(--serif);font-size:15px;font-style:italic;line-height:1.7;color:rgba(245,242,235,.72);padding-top:24px}
+.ta{margin-top:16px;padding-top:12px;border-top:1px solid rgba(245,242,235,.08)}
+.tan{font-size:13px;font-weight:700;color:var(--white)}
+.tac{font-size:12px;color:#00E87C;margin-top:2px}
+
+/* CTA */
+.ctas{background:var(--ink);text-align:center;padding:110px 48px}
+.ctai{max-width:660px;margin:0 auto}
+.ctat{font-family:var(--serif);font-size:clamp(34px,5vw,62px);line-height:1.12;margin-bottom:20px}
+.ctat em{font-style:italic;color:var(--gold2)}
+.ctas2{font-family:var(--serif);font-size:17px;font-style:italic;color:rgba(255,248,235,.75);margin-bottom:42px;line-height:1.65}
+.ctab{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+/* FOOTER */
+footer{background:var(--ink);border-top:1px solid rgba(245,242,235,.07);padding:68px 48px 40px}
+.fi{max-width:1060px;margin:0 auto}
+.ft{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:46px;margin-bottom:50px}
+.flogo{font-family:var(--serif);font-size:24px;color:var(--white);margin-bottom:12px}
+.flogo em{color:var(--gold);font-style:italic}
+.ftag{font-family:var(--serif);font-size:13px;font-style:italic;color:rgba(245,242,235,.37);line-height:1.65}
+.fc h4{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);margin-bottom:15px;font-weight:700}
+.fc ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.fc ul a{font-size:14px;color:rgba(245,242,235,.47);text-decoration:none;transition:color .2s;font-family:var(--serif)}
+.fc ul a:hover{color:rgba(245,242,235,.85)}
+.fb{padding-top:24px;border-top:1px solid rgba(245,242,235,.06);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.fcp{font-size:12px;color:rgba(245,242,235,.27);letter-spacing:.04em}
+.flg{display:flex;gap:18px}
+.flg a{font-size:13px;color:#E8B84B;text-decoration:underline;cursor:pointer;transition:color .2s;font-family:var(--sans);letter-spacing:.04em;font-weight:500}
+.flg a:hover{color:#FFD94A}
+
+/* MODAL */
+.mo{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:900;overflow-y:auto;padding:40px 20px}
+.mo.open{display:flex;align-items:flex-start;justify-content:center;opacity:1}
+.mb{background:var(--ink2);border:1px solid rgba(232,184,75,.2);width:100%;max-width:700px;position:relative}
+
+.mcl{position:absolute;top:14px;right:16px;background:none;border:none;color:rgba(245,242,235,.35);font-size:28px;cursor:pointer;line-height:1;padding:4px;z-index:10;transition:color .2s}
+.mcl:hover{color:var(--gold)}
+
+/* FORM */
+.fmpr{padding:14px 36px 0}
+.fmpb{height:2px;background:rgba(245,242,235,.07);border-radius:2px;overflow:hidden}
+.fmpf{height:100%;background:var(--teal);transition:width .5s ease;width:0}
+.fmpm{display:flex;justify-content:space-between;font-size:10px;color:rgba(245,242,235,.28);letter-spacing:.08em;text-transform:uppercase;margin-top:6px}
+.fmh{padding:26px 36px 16px;border-bottom:1px solid rgba(245,242,235,.07)}
+.fmey{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--gold);font-weight:700;margin-bottom:5px}
+.fmtl{font-family:var(--serif);font-size:25px;color:var(--white);line-height:1.2;margin-bottom:5px}
+.fmds{font-size:13px;color:rgba(245,242,235,.4);font-family:var(--serif);font-style:italic}
+.fmbody{padding:22px 36px 26px;min-height:190px}
+.fmsec{display:none}.fmsec.active{display:block}
+.fmqt{font-size:14px;color:rgba(245,242,235,.7);margin-bottom:10px;line-height:1.5}
+.fmop{display:grid;grid-template-columns:1fr 1fr;gap:6px}.fmop.c1{grid-template-columns:1fr}
+.fmo{border:1px solid rgba(245,242,235,.11);background:transparent;color:rgba(245,242,235,.58);padding:10px 13px;font-size:13px;cursor:pointer;text-align:left;line-height:1.4;transition:all .15s;font-family:var(--sans);width:100%}
+.fmo:hover{border-color:rgba(232,184,75,.35);color:var(--white)}
+.fmo.sg{border-color:#00E87C;background:rgba(13,122,78,.12);color:#00E87C}
+.fmo.sa{border-color:var(--gold);background:rgba(232,184,75,.08);color:var(--gold2)}
+.fmo.sr{border-color:#c43030;background:rgba(196,48,48,.08);color:#FF5050}
+.fmin{width:100%;background:transparent;border:none;border-bottom:1px solid rgba(245,242,235,.2);color:var(--white);font-family:var(--serif);font-size:19px;padding:10px 0;outline:none;transition:border-color .2s}
+.fmin:focus{border-bottom-color:#00E87C}
+.fmin::placeholder{color:rgba(245,242,235,.18)}
+textarea.fmin{resize:none;border:1px solid rgba(245,242,235,.12);padding:12px;font-size:15px;min-height:80px;background:rgba(245,242,235,.02)}
+.fmnav{display:flex;justify-content:space-between;align-items:center;padding:12px 36px 20px;border-top:1px solid rgba(245,242,235,.07)}
+.fmbtn{font-family:var(--sans);font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;padding:11px 24px;background:var(--teal);color:var(--white);border:none;cursor:pointer;transition:background .2s}
+.fmbtn:hover{background:var(--teal2)}
+.fmbck{font-family:var(--sans);font-size:11px;color:rgba(245,242,235,.3);background:transparent;border:none;cursor:pointer;transition:color .18s}
+.fmbck:hover{color:rgba(245,242,235,.65)}
+.fmhnt{font-size:10px;color:rgba(245,242,235,.18)}
+.fmld{padding:48px 36px;text-align:center;display:none}.fmld.show{display:block}
+.ldring{width:44px;height:44px;border:2px solid rgba(245,242,235,.07);border-top-color:#00E87C;border-radius:50%;animation:spin 1s linear infinite;margin:0 auto 16px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.ldtxt{font-family:var(--serif);font-size:19px;color:var(--white);margin-bottom:5px}
+.ldsub{font-size:12px;color:rgba(245,242,235,.33);font-style:italic;font-family:var(--serif)}
+.ldsteps{margin-top:16px;display:flex;flex-direction:column;gap:5px;max-width:270px;margin-left:auto;margin-right:auto}
+.ldi{font-size:11px;color:rgba(245,242,235,.28);display:flex;align-items:center;gap:7px;text-align:left}
+.ldd{width:5px;height:5px;border-radius:50%;background:rgba(245,242,235,.1);flex-shrink:0;transition:background .3s}.ldd.done{background:var(--teal2)}
+.legal-modal{padding:28px 36px;max-height:76vh;overflow-y:auto}
+.legal-modal h3{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin:16px 0 6px}
+.legal-modal p{font-family:var(--serif);font-size:15px;line-height:1.8;color:rgba(245,242,235,.7);margin-bottom:8px}
+
+@media(max-width:900px){
+  nav{padding:14px 20px}nav.sc{padding:10px 20px}.nv{display:none}
+  section{padding:70px 20px}.hero{padding:0 20px 54px}
+  .mfg,.sysh,.ceoi,.prgh{grid-template-columns:1fr;gap:30px}
+  .prgg{grid-template-columns:repeat(2,1fr)}.mths{grid-template-columns:1fr}.stg2{grid-template-columns:1fr 1fr;gap:22px}
+  .tcg{grid-template-columns:1fr}.ft{grid-template-columns:1fr 1fr;gap:30px}
+  .lr{grid-template-columns:42px 1fr;gap:12px}.ltgs{display:none}.hnum{display:none}
+  .fmbody,.fmnav,.fmh,.fmpr,.legal-modal{padding-left:18px;padding-right:18px}
+}
+
+/* DYNAMIC ANIMATIONS */
+.slide-up{opacity:0;transform:translateY(40px);transition:opacity .6s cubic-bezier(.22,1,.36,1),transform .6s cubic-bezier(.22,1,.36,1)}
+.slide-left{opacity:0;transform:translateX(-50px);transition:opacity .65s cubic-bezier(.22,1,.36,1),transform .65s cubic-bezier(.22,1,.36,1)}
+.slide-right{opacity:0;transform:translateX(50px);transition:opacity .65s cubic-bezier(.22,1,.36,1),transform .65s cubic-bezier(.22,1,.36,1)}
+.scale-in{opacity:0;transform:scale(.92);transition:opacity .6s ease,transform .6s cubic-bezier(.34,1.56,.64,1)}
+.slide-up.anim,.slide-left.anim,.slide-right.anim,.scale-in.anim{opacity:1;transform:none}
+.delay-1{transition-delay:.08s}.delay-2{transition-delay:.16s}.delay-3{transition-delay:.24s}
+.delay-4{transition-delay:.32s}.delay-5{transition-delay:.40s}
+
+/* HOVER GLOW on program cards */
+.pc{position:relative;overflow:hidden}
+.pc::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(0,200,115,.12) 0%,transparent 60%);opacity:0;transition:opacity .3s;pointer-events:none}
+.pc:hover::after{opacity:1}
+
+/* PULSE on CTA button */
+@keyframes pulse-ring{0%{box-shadow:0 0 0 0 rgba(232,184,75,.4)}70%{box-shadow:0 0 0 14px rgba(232,184,75,0)}100%{box-shadow:0 0 0 0 rgba(232,184,75,0)}}
+.bg2{animation:pulse-ring 2.5s ease-out infinite}
+
+/* SHIMMER on gold elements */
+@keyframes shimmer{0%{background-position:200% center}100%{background-position:-200% center}}
+.stag{background:linear-gradient(90deg,#E8B84B,#FFE066,#E8B84B,#E8B84B);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 4s linear infinite}
+
+/* FLOATING particles */
+@keyframes float1{0%,100%{transform:translateY(0) translateX(0)}33%{transform:translateY(-18px) translateX(8px)}66%{transform:translateY(8px) translateX(-6px)}}
+@keyframes float2{0%,100%{transform:translateY(0) translateX(0)}33%{transform:translateY(12px) translateX(-10px)}66%{transform:translateY(-10px) translateX(12px)}}
+.particle{position:absolute;border-radius:50%;pointer-events:none;opacity:.18}
+.p1{width:160px;height:160px;background:radial-gradient(circle,#00C873,transparent);top:15%;left:8%;animation:float1 7s ease-in-out infinite}
+.p2{width:100px;height:100px;background:radial-gradient(circle,#E8B84B,transparent);top:60%;right:10%;animation:float2 9s ease-in-out infinite}
+.p3{width:70px;height:70px;background:radial-gradient(circle,#0D7A4E,transparent);top:35%;right:25%;animation:float1 11s ease-in-out infinite 2s}
+
+/* SECTION dividers - animated line */
+@keyframes grow-line{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.animated-divider{width:60px;height:2px;background:linear-gradient(90deg,var(--teal2),#E8B84B);margin:28px 0;transform-origin:left;animation:grow-line .8s ease forwards}
+
+/* DNA HELIX ANIMATION */
+@keyframes dna-rotate { from { transform: rotateY(0deg); } to { transform: rotateY(360deg); } }
+@keyframes dna-strand1 { 0%,100%{d:path('M50 10 Q80 30 50 50 Q20 70 50 90 Q80 110 50 130 Q20 150 50 170 Q80 190 50 210')} 50%{d:path('M50 10 Q20 30 50 50 Q80 70 50 90 Q20 110 50 130 Q80 150 50 170 Q20 190 50 210')} }
+@keyframes dna-strand2 { 0%,100%{d:path('M50 10 Q20 30 50 50 Q80 70 50 90 Q20 110 50 130 Q80 150 50 170 Q20 190 50 210')} 50%{d:path('M50 10 Q80 30 50 50 Q20 70 50 90 Q80 110 50 130 Q20 150 50 170 Q80 190 50 210')} }
+@keyframes dna-rung { 0%,100%{opacity:1;transform:scaleX(1)} 25%,75%{opacity:0.15;transform:scaleX(0.1)} }
+@keyframes dna-node { 0%,100%{r:4;opacity:1} 50%{r:2.5;opacity:0.4} }
+.dna-wrap { display:flex; align-items:center; justify-content:center; margin:0 auto; }
+.dna-svg { filter: drop-shadow(0 0 8px rgba(0,200,115,0.3)); }
+.dna-s1 { fill:none; stroke:#00C873; stroke-width:2.5; stroke-linecap:round;
+  animation: dna-strand1 3s ease-in-out infinite; }
+.dna-s2 { fill:none; stroke:#E8B84B; stroke-width:2.5; stroke-linecap:round;
+  animation: dna-strand2 3s ease-in-out infinite; }
+.dna-rung { stroke:rgba(245,242,235,0.25); stroke-width:1.5; stroke-linecap:round; }
+.dna-node1 { fill:#00C873; animation: dna-node 3s ease-in-out infinite; }
+.dna-node2 { fill:#E8B84B; animation: dna-node 3s ease-in-out infinite 0.1s; }
+
+/* PROMO PRICING */
+.promo-badge{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,rgba(232,184,75,.18),rgba(232,184,75,.08));border:1px solid rgba(232,184,75,.5);border-radius:4px;padding:4px 10px;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#E8B84B;font-weight:600;margin-bottom:12px}
+.promo-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:#E8B84B;animation:pulse-dot 1.4s ease-in-out infinite}
+@keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+.price-wrap{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.price-original{font-size:18px;color:rgba(245,242,235,.28);text-decoration:line-through;text-decoration-color:rgba(255,80,80,.6);font-family:var(--serif)}
+.price-new{font-size:42px;font-weight:700;color:var(--white);font-family:var(--serif);line-height:1}
+.price-free{font-size:38px;font-weight:700;font-family:var(--serif);line-height:1;background:linear-gradient(135deg,#00E87C,#00C873);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.price-eur{font-size:13px;color:rgba(232,184,75,.7);font-family:var(--sans);font-weight:400;align-self:flex-end;padding-bottom:4px}
+.savings-pill{display:inline-flex;align-items:center;background:rgba(0,200,115,.14);border:1px solid rgba(0,200,115,.3);border-radius:3px;padding:3px 8px;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#00E87C;margin-top:6px;margin-bottom:2px}
+.urgency-bar{background:rgba(255,80,80,.07);border:1px solid rgba(255,80,80,.2);border-radius:4px;padding:8px 12px;margin-bottom:14px;display:flex;align-items:center;gap:8px;font-size:11px;color:rgba(232,176,160,.8)}
+.urgency-bar::before{content:'';width:6px;height:6px;border-radius:50%;background:#FF5050;flex-shrink:0;animation:pulse-dot 1s ease-in-out infinite}
+.countdown{font-size:10px;color:rgba(245,242,235,.25);letter-spacing:.06em;margin-top:4px}
+
+.female-only{display:inline-flex;align-items:center;gap:5px;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(0,200,115,.7);font-family:var(--sans);margin-bottom:6px}
+.female-only::before{content:'';display:inline-block;width:5px;height:5px;border-radius:50%;background:rgba(0,200,115,.6)}
+
+.pc-empresa{background:rgba(232,184,75,.04);border:1px solid rgba(232,184,75,.3);position:relative}
+.pc-empresa:hover{border-color:rgba(232,184,75,.6)}
+.empresa-badge{display:inline-flex;align-items:center;gap:5px;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#E8B84B;font-weight:600;margin-bottom:10px}
+.empresa-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:#E8B84B;animation:pulse-dot 1.4s ease-in-out infinite}
+.loss-calc{background:rgba(11,11,9,.4);border:1px solid rgba(232,184,75,.15);border-radius:8px;padding:14px;margin:12px 0}
+.loss-row{display:flex;justify-content:space-between;align-items:center;padding:5px 0;font-size:11px;border-bottom:1px solid rgba(245,242,235,.06)}
+.loss-row:last-child{border-bottom:none}
+.loss-label{color:rgba(245,242,235,.45)}
+.loss-val{color:#E8B84B;font-weight:600;font-family:var(--serif)}
+.loss-total{display:flex;justify-content:space-between;align-items:center;padding:10px 0 0;margin-top:6px;border-top:1px solid rgba(232,184,75,.3)}
+.loss-total-label{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:rgba(245,242,235,.5)}
+.loss-total-val{font-size:20px;font-weight:700;color:#E8B84B;font-family:var(--serif)}
+.calc-note{font-size:9.5px;color:rgba(245,242,235,.3);line-height:1.5;margin-top:8px;font-style:italic}
+</style>
+</head>
+<body>
+
+<form id="caih-form-hidden" hidden>
+  <input name="nombre"><input name="email"><input name="motivo">
+  <input name="capa1-ph"><input name="capa1-emocion"><input name="capa2-sna">
+  <input name="capa2-cortisol"><input name="capa3-atp"><input name="capa3-oxigeno">
+  <input name="capa4-hormonal"><input name="capa4-plasticidad">
+  <input name="diagnostico"><input name="indice-global"><input name="capa-fallo">
+</form>
+
+<nav id="nav">
+  <a href="#inicio" class="nl">CAIH<em>&middot;</em></a>
+  <ul class="nv">
+    <li><a href="#sistema">El sistema</a></li>
+    <li><a href="#metodologia">Metodolog&iacute;a</a></li>
+    <li><a href="#fundador">Fundador</a></li>
+    <li><a href="#programas">Programas</a></li>
+    
+    <li><a href="#filosofia">Filosof&iacute;a</a></li>
+  </ul>
+  <button class="nc" onclick="openModal()">Evaluaci&oacute;n inicial</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="particle p1"></div><div class="particle p2"></div><div class="particle p3"></div>
+<canvas id="bg-canvas" style="position:absolute;inset:0;width:100%;height:100%;z-index:0;opacity:.85"></canvas>
+
+<div style="position:absolute;top:80px;right:48px;z-index:1;opacity:0.85">
+<svg class="dna-svg" viewBox="0 0 100 260" width="72" height="260" xmlns="http://www.w3.org/2000/svg">
+  <!-- Strand 1: green -->
+  <path class="dna-s1" d="M50 10 Q82 30 50 55 Q18 80 50 105 Q82 130 50 155 Q18 180 50 205 Q82 230 50 250"/>
+  <!-- Strand 2: gold -->
+  <path class="dna-s2" d="M50 10 Q18 30 50 55 Q82 80 50 105 Q18 130 50 155 Q82 180 50 205 Q18 230 50 250"/>
+  <!-- Base pairs / rungs -->
+  <line class="dna-rung" x1="65" y1="22" x2="35" y2="22" style="animation:dna-rung 3s ease-in-out infinite 0s"/>
+  <line class="dna-rung" x1="75" y1="38" x2="25" y2="38" style="animation:dna-rung 3s ease-in-out infinite 0.21s"/>
+  <line class="dna-rung" x1="50" y1="55" x2="50" y2="55" style="animation:dna-rung 3s ease-in-out infinite 0.43s"/>
+  <line class="dna-rung" x1="25" y1="72" x2="75" y2="72" style="animation:dna-rung 3s ease-in-out infinite 0.64s"/>
+  <line class="dna-rung" x1="20" y1="88" x2="80" y2="88" style="animation:dna-rung 3s ease-in-out infinite 0.86s"/>
+  <line class="dna-rung" x1="50" y1="105" x2="50" y2="105" style="animation:dna-rung 3s ease-in-out infinite 1.07s"/>
+  <line class="dna-rung" x1="80" y1="122" x2="20" y2="122" style="animation:dna-rung 3s ease-in-out infinite 1.29s"/>
+  <line class="dna-rung" x1="75" y1="138" x2="25" y2="138" style="animation:dna-rung 3s ease-in-out infinite 1.5s"/>
+  <line class="dna-rung" x1="50" y1="155" x2="50" y2="155" style="animation:dna-rung 3s ease-in-out infinite 1.71s"/>
+  <line class="dna-rung" x1="25" y1="172" x2="75" y2="172" style="animation:dna-rung 3s ease-in-out infinite 1.93s"/>
+  <line class="dna-rung" x1="20" y1="188" x2="80" y2="188" style="animation:dna-rung 3s ease-in-out infinite 2.14s"/>
+  <line class="dna-rung" x1="50" y1="205" x2="50" y2="205" style="animation:dna-rung 3s ease-in-out infinite 2.36s"/>
+  <line class="dna-rung" x1="80" y1="222" x2="20" y2="222" style="animation:dna-rung 3s ease-in-out infinite 2.57s"/>
+  <line class="dna-rung" x1="72" y1="238" x2="28" y2="238" style="animation:dna-rung 3s ease-in-out infinite 2.79s"/>
+  <!-- Nodes strand 1 (teal) -->
+  <circle class="dna-node1" cx="50" cy="10" r="4.5" style="animation-delay:0s"/>
+  <circle class="dna-node1" cx="80" cy="32" r="3.5" style="animation-delay:0.21s"/>
+  <circle class="dna-node1" cx="50" cy="55" r="4.5" style="animation-delay:0.43s"/>
+  <circle class="dna-node1" cx="20" cy="78" r="3.5" style="animation-delay:0.64s"/>
+  <circle class="dna-node1" cx="50" cy="105" r="4.5" style="animation-delay:0.86s"/>
+  <circle class="dna-node1" cx="80" cy="130" r="3.5" style="animation-delay:1.07s"/>
+  <circle class="dna-node1" cx="50" cy="155" r="4.5" style="animation-delay:1.29s"/>
+  <circle class="dna-node1" cx="20" cy="180" r="3.5" style="animation-delay:1.5s"/>
+  <circle class="dna-node1" cx="50" cy="205" r="4.5" style="animation-delay:1.71s"/>
+  <circle class="dna-node1" cx="80" cy="230" r="3.5" style="animation-delay:1.93s"/>
+  <circle class="dna-node1" cx="50" cy="250" r="4.5" style="animation-delay:2.14s"/>
+  <!-- Nodes strand 2 (gold) -->
+  <circle class="dna-node2" cx="20" cy="32" r="3.5" style="animation-delay:0.1s"/>
+  <circle class="dna-node2" cx="80" cy="78" r="3.5" style="animation-delay:0.53s"/>
+  <circle class="dna-node2" cx="20" cy="130" r="3.5" style="animation-delay:0.96s"/>
+  <circle class="dna-node2" cx="80" cy="180" r="3.5" style="animation-delay:1.39s"/>
+  <circle class="dna-node2" cx="20" cy="230" r="3.5" style="animation-delay:1.82s"/>
+</svg>
+</div>
+</div>
+  <div class="hnum" style="position:relative;z-index:1">01</div>
+  <div class="htag" style="position:relative;z-index:1">Centro de Alta Integraci&oacute;n Humana</div>
+  <h1 class="ht" style="position:relative;z-index:1">No tratamos<br>enfermedades.<br><em>Dise&ntilde;amos</em><br>contextos biol&oacute;gicos.</h1>
+  <p class="hs" style="position:relative;z-index:1">El sistema biol&oacute;gico no est&aacute; roto. Opera con datos mal configurados. CAIH trabaja con mujeres que presentan disfunci&oacute;n hormonal, fatiga o inflamaci&oacute;n cr&oacute;nica &mdash; y con empresas que no entienden por qu&eacute; su plantilla rinde por debajo de su potencial sin causa aparente. En ambos casos el problema est&aacute; en la misma capa.</p>
+  <div class="ha" style="position:relative;z-index:1">
+    <button class="bp" onclick="openModal()">Iniciar evaluaci&oacute;n gratuita</button>
+    <a href="#sistema" class="bs" onclick="document.getElementById('sistema').scrollIntoView({behavior:'smooth'});return false">Conocer el m&eacute;todo</a>
+  </div>
+  <div class="hscr" style="z-index:1" style="cursor:pointer" onclick="document.getElementById('manifiesto').scrollIntoView({behavior:'smooth'})"><div class="sln"></div><span class="stx">Descubrir</span></div>
+</section>
+
+<!-- MANIFIESTO -->
+<section class="mf" id="manifiesto">
+  <div class="inn">
+    <div class="mfg">
+      <div>
+        <div class="stag">La premisa</div>
+        <h2 class="stit">Cuando cambia el entorno,<br>cambia <em>el sistema</em>.</h2>
+        <div class="dv"></div>
+        <p class="sbod">La medicina moderna trata al cuerpo como una colecci&oacute;n de &oacute;rganos que fallan. CAIH lo observa como un sistema operativo biol&oacute;gico que aprende, se adapta y, cuando el entorno lo permite, se reorganiza.</p>
+      </div>
+      <div class="mqw">
+        <div class="mq"><p>El cerebro no es un &oacute;rgano que decide. Es un sistema predictivo autoajustable. No repites porque quieres; repites porque salirte del attractor cuesta m&aacute;s energ&iacute;a de la que el sistema est&aacute; dispuesto a pagar.</p><cite>Fundamentos CAIH</cite></div>
+        <div class="mq"><p>El fenotipo celular responde al entorno, no al genoma. El genoma es estable. El fenotipo es din&aacute;mico y depende del pH, el ox&iacute;geno, la disponibilidad energ&eacute;tica y las se&ntilde;ales inflamatorias.</p><cite>Modelo bioel&eacute;ctrico CAIH</cite></div>
+        <div class="mq"><p>Un patr&oacute;n desaparece cuando deja de ser la soluci&oacute;n metab&oacute;licamente m&aacute;s eficiente para sostener la coherencia del sistema. No por fuerza de voluntad.</p><cite>Termodin&aacute;mica de los attractores</cite></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SISTEMA -->
+<section id="sistema">
+  <div class="inn">
+    <div class="sysh">
+      <div>
+        <div class="stag">El sistema operativo biol&oacute;gico</div>
+        <h2 class="stit">Cinco capas.<br>Una <em>cascada</em>.</h2>
+      </div>
+      <p class="sbod" style="align-self:end">El s&iacute;ntoma siempre ocurre en la &uacute;ltima capa. La medicina convencional empieza ah&iacute;. CAIH empieza en la primera.</p>
+    </div>
+    <div class="lfl">
+      <div class="lr"><div class="lnu">01</div><div><div class="lnm">Identificaci&oacute;n de atractores</div><div class="ldc">Reconocimiento de patrones repetitivos que el sistema ejecuta sin recalcular. El atractor es la configuraci&oacute;n estable que sostiene el s&iacute;ntoma.</div></div><div class="ltgs"><span class="ltg">Patrones</span><span class="ltg">Atractores</span><span class="ltg">Conducta</span><span class="ltg">Bioelectricidad</span></div></div>
+      <div class="lr"><div class="lnu">02</div><div><div class="lnm">Detecci&oacute;n de ruido biol&oacute;gico</div><div class="ldc">Identificaci&oacute;n de agentes que modifican el estado interno: inflamaci&oacute;n cr&oacute;nica, par&aacute;sitos, disbiosis. Ruido que el cerebro interpreta como amenaza existencial.</div></div><div class="ltgs"><span class="ltg">Inflamaci&oacute;n</span><span class="ltg">Par&aacute;sitos</span><span class="ltg">Cortisol</span><span class="ltg">Inflamaci&oacute;n</span></div></div>
+      <div class="lr"><div class="lnu">03</div><div><div class="lnm">Metabolismo celular</div><div class="ldc">La energ&iacute;a que genera cada c&eacute;lula. Cuando falla esta capa, el s&iacute;ntoma es inminente.</div></div><div class="ltgs"><span class="ltg">pH</span><span class="ltg">Voltaje</span><span class="ltg">O2</span><span class="ltg">ATP</span><span class="ltg">Redox</span></div></div>
+      <div class="lr"><div class="lnu">04</div><div><div class="lnm">Tiempo interno (Trauma &middot; SNA)</div><div class="ldc">El sistema congelado en el pasado. El trauma como patr&oacute;n auton&oacute;mico activo que no sabe que ya pas&oacute;.</div></div><div class="ltgs"><span class="ltg">Hormonas</span><span class="ltg">Epigen&eacute;tica</span><span class="ltg">Attractor</span></div></div>
+      <div class="lr"><div class="lnu" style="background:rgba(196,48,48,.1);border:1px solid rgba(196,48,48,.25);color:#FF5050">05</div><div><div class="lnm" style="color:#FFA090">S&iacute;ntoma / Enfermedad</div><div class="ldc" style="color:rgba(232,176,160,.45)">No el error. La soluci&oacute;n local que el sistema encontr&oacute; para sobrevivir. Aqu&iacute; termina CAIH, no comienza.</div></div><div class="ltgs"><span class="ltg" style="border-color:rgba(196,48,48,.25);color:rgba(255,80,80,.4)">SOP</span><span class="ltg" style="border-color:rgba(196,48,48,.25);color:rgba(255,80,80,.4)">Fatiga</span><span class="ltg" style="border-color:rgba(196,48,48,.25);color:rgba(255,80,80,.4)">Ansiedad</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stg2">
+    <div class="si"><div class="sn">5<em>cap</em></div><div class="sl">Sistema operativo</div><div class="sd">Cada una condiciona la siguiente</div></div>
+    <div class="si"><div class="sn">16<em>var</em></div><div class="sl">Variables m&eacute;tricas</div><div class="sd">Cuantificadas en evaluaci&oacute;n</div></div>
+    <div class="si"><div class="sn">0<em>dx</em></div><div class="sl">Enfermedades tratadas</div><div class="sd">Entornos reconfigurados</div></div>
+    <div class="si"><div class="sn">1<em>sis</em></div><div class="sl">Biolog&iacute;a integrada</div><div class="sd">Emoci&oacute;n, c&eacute;lula, entorno</div></div>
+  </div>
+</div>
+
+<!-- METODOLOGIA -->
+<section id="metodologia">
+  <div class="inn">
+    <div>
+      <div class="stag">C&oacute;mo trabajamos</div>
+      <h2 class="stit" style="max-width:520px">No aplicamos protocolos.<br><em>Leemos sistemas.</em></h2>
+    </div>
+    <div class="mths">
+      <div class="sc2"><div class="scp">01</div><div class="sct">Evaluaci&oacute;n del sistema</div><div class="scd">Mapeamos las 16 variables a trav&eacute;s de entrevista biogr&aacute;fica, anal&iacute;tica funcional y cuestionario de entorno.</div></div>
+      <div class="sc2"><div class="scp">02</div><div class="sct">Localizaci&oacute;n del punto de p&eacute;rdida</div><div class="scd">Identificamos en qu&eacute; capa el sistema perdi&oacute; su capacidad de autorregulaci&oacute;n. Ah&iacute; comienza la intervenci&oacute;n.</div></div>
+      <div class="sc2"><div class="scp">03</div><div class="sct">Reconfiguraci&oacute;n del entorno</div><div class="scd">No suprimimos s&iacute;ntomas. Modificamos las variables del entorno que mantienen al sistema atrapado.</div></div>
+      <div class="sc2"><div class="scp">04</div><div class="sct">Monitoreo de la cascada</div><div class="scd">Seguimos la respuesta capa por capa. Cuando el entorno cambia, el metabolismo responde.</div></div>
+      <div class="sc2"><div class="scp">05</div><div class="sct">Restauraci&oacute;n de la plasticidad</div><div class="scd">El objetivo final es devolver al sistema la capacidad de adaptarse sin necesitar el s&iacute;ntoma.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FUNDADOR -->
+<section class="ceo" id="fundador">
+  <div class="ceoi">
+    <div>
+      <div class="cpfr">
+        <div class="cpi">SR</div>
+        <div class="cpl">
+          <div class="cpn">Salvador Roka</div>
+          <div class="cpr">Eti&oacute;logo &middot; Especialista en Optimizaci&oacute;n Celular &middot; Fundador CAIH</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="stag">Salvador Roka &mdash; Fundador</div>
+      <div class="ceo-intro">&ldquo;No me acerco a la biolog&iacute;a buscando respuestas definitivas. Me acerco a ella buscando las preguntas correctas.&rdquo;</div>
+      <div class="ceo-body">
+        <p>Mi trabajo no consiste en aplicar protocolos sobre el cuerpo humano, sino en <strong>comprender los sistemas que producen sus patrones</strong>. La enfermedad no es un error que deba eliminarse; es la respuesta coherente de un sistema biol&oacute;gico que intenta adaptarse a un entorno mal configurado.</p>
+        <p>El cuerpo humano es un <strong>sistema de datos biol&oacute;gicos en constante evaluaci&oacute;n</strong>: c&eacute;lulas, microbiota, sistema inmune, metabolismo y sistema nervioso intercambiando informaci&oacute;n en tiempo real. El cerebro no gobierna este sistema; lo coordina.</p>
+        <p>En CAIH no tratamos enfermedades en el sentido cl&aacute;sico. <strong>Dise&ntilde;amos contextos biol&oacute;gicos</strong>. Identificamos atractores fisiol&oacute;gicos y modificamos las variables que mantienen al sistema atrapado en supervivencia metab&oacute;lica.</p>
+        <p>Porque en sistemas complejos, <strong>intervenir sin comprender puede ser m&aacute;s destructivo que no intervenir</strong>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMAS -->
+<section class="prog" id="programas">
+  <div class="inn">
+    <div class="prgh">
+      <div>
+        <div class="stag">Programas</div>
+        <h2 class="stit">Cuatro formas de<br>entrar al <em>sistema</em>.</h2>
+      </div>
+      <p class="sbod" style="align-self:end">Tres programas para personas. Uno para empresas que no entienden por qu&eacute; su plantilla no rinde. Todos comparten el mismo marco: el problema est&aacute; antes del s&iacute;ntoma.</p>
+    </div>
+    <div class="prgg">
+      <div class="pc">
+        <div class="pci"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg></div>
+        <div class="promo-badge">Oferta por tiempo limitado</div>
+        <div class="pcn">Programa 01</div>
+        <div class="pct">Evaluaci&oacute;n del sistema operativo</div>
+        <div class="urgency-bar">Solo disponible hasta agotar plazas</div>
+        <div class="price-wrap">
+          <span class="price-original">197 EUR</span>
+          <span class="price-free">Gratis</span>
+        </div>
+        <div class="savings-pill">Valor real 197 EUR &mdash; acceso gratuito</div>
+        <div class="psub" style="margin-top:8px">Sesi&oacute;n &uacute;nica</div>
+        <div class="pcd">Mapeamos las 4 fases: atractores, ruido biol&oacute;gico, terreno y tiempo interno. Identificamos el nodo de interferencia exacto. Recibes tu Reporte Biosist&eacute;mico: el diagn&oacute;stico del patr&oacute;n, no del s&iacute;ntoma.</div>
+        <div class="pctg"><span class="ptg">Sesi&oacute;n &uacute;nica</span><span class="ptg">Informe detallado</span><span class="ptg">Protocolo personalizado</span></div>
+        <a href="https://wa.me/34641762568?text=Hola%20Salvador%2C%20quiero%20reservar%20la%20Evaluaci%C3%B3n%20del%20Sistema%20Operativo%20(GRATUITA%20por%20tiempo%20limitado)." target="_blank" class="wbtn">Reservar por WhatsApp &rarr;</a>
+      </div>
+      <div class="pc" style="border-left:1px solid rgba(13,122,78,.38);border-right:1px solid rgba(13,122,78,.38)">
+        <div class="pci" style="border-color:rgba(13,122,78,.4)"><svg viewBox="0 0 24 24" style="stroke:var(--teal2)"><path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12z"/><path d="M12 6v6l4 2"/></svg></div>
+        <div class="promo-badge">Oferta por tiempo limitado</div>
+        <div class="pcn" style="color:#00E87C">Programa 02 &mdash; M&aacute;s popular</div>
+        <div class="pct">Reconfiguraci&oacute;n sist&eacute;mica &mdash; 2 meses</div>
+        <div class="urgency-bar">Precio de lanzamiento &mdash; plazas limitadas</div>
+        <div class="price-wrap">
+          <span class="price-original">897 EUR</span>
+          <span class="price-new">397</span>
+          <span class="price-eur">EUR</span>
+        </div>
+        <div class="savings-pill">Ahorra 500 EUR &mdash; 56% de descuento</div>
+        <div class="psub" style="margin-top:8px">Precio cerrado &middot; Todo incluido</div>
+        <div class="pcd">Abordamos el <em>por qu&eacute;</em> el sistema opera con disfunci&oacute;n, modificando sus par&aacute;metros de ejecuci&oacute;n. Incluye Auditor&iacute;a de Ciclo y Sangrado: decodificaci&oacute;n hormonal completa (pH vaginal, dominancia estrog&eacute;nica, estroboloma, disruptores end&oacute;crinos). Protocolo de 2 meses con ajuste din&aacute;mico capa a capa.</div>
+        <div class="pctg"><span class="ptg" style="border-color:rgba(13,122,78,.3);color:#00E87C">3 sesiones</span><span class="ptg" style="border-color:rgba(13,122,78,.3);color:#00E87C">Monitoreo continuo</span><span class="ptg" style="border-color:rgba(13,122,78,.3);color:#00E87C">Ajuste din&aacute;mico</span></div>
+        <a href="https://wa.me/34641762568?text=Hola%20Salvador%2C%20quiero%20reservar%20la%20Reconfiguraci%C3%B3n%20Sist%C3%A9mica%202%20meses%20(247%E2%82%AC)." target="_blank" class="wbtn">Reservar por WhatsApp &rarr;</a>
+      </div>
+      <div class="pc">
+        <div class="pci"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div class="pcn">Programa 03</div>
+        <div class="pct">Members&iacute;a CAIH &mdash; acceso continuo</div>
+        <div class="pprice">97 <em>EUR/mes</em></div>
+        <div class="psub">Suscripci&oacute;n mensual</div>
+        <div class="pcd">Sesi&oacute;n mensual de revisi&oacute;n, acceso a recursos y comunidad de pr&aacute;ctica. Para mantener la plasticidad del sistema a largo plazo.</div>
+        <div class="pctg"><span class="ptg">Mensual</span><span class="ptg">Comunidad</span><span class="ptg">Recursos exclusivos</span></div>
+        <a href="https://wa.me/34641762568?text=Hola%20Salvador%2C%20quiero%20unirme%20a%20la%20Members%C3%ADa%20CAIH%20(97%E2%82%AC%2Fmes)." target="_blank" class="wbtn-g">Unirse por WhatsApp &rarr;</a>
+      </div>
+      <div class="pc pc-empresa">
+        <div class="pci" style="border-color:rgba(232,184,75,.3)"><svg viewBox="0 0 24 24" style="stroke:#E8B84B"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div class="empresa-badge">Para empresas</div>
+        <div class="pcn" style="color:#E8B84B">Programa 04 &mdash; Empresas</div>
+        <div class="pct">Auditor&iacute;a biosist&eacute;mica de plantilla</div>
+        <div class="urgency-bar" style="background:rgba(232,184,75,.07);border-color:rgba(232,184,75,.2)">Precio de lanzamiento &mdash; plazas muy limitadas</div>
+        <div class="price-wrap">
+          <span class="price-original" style="color:rgba(245,242,235,.25)">2.200 EUR</span>
+          <span class="price-new" style="color:#E8B84B">897</span>
+          <span class="price-eur">EUR</span>
+        </div>
+        <div class="savings-pill" style="background:rgba(232,184,75,.1);border-color:rgba(232,184,75,.3);color:#E8B84B">Ahorra 415 EUR &mdash; 56% de descuento</div>
+        <div class="psub" style="margin-top:8px">Lo que cuesta no intervenir</div>
+        <div class="loss-calc">
+          <div class="loss-row"><span class="loss-label">Bajas recurrentes sin diagn&oacute;stico</span><span class="loss-val">&#8203;</span></div>
+          <div class="loss-row"><span class="loss-label">Sustituci&oacute;n / ETT (coste x1.4)</span><span class="loss-val">&#8203;</span></div>
+          <div class="loss-row"><span class="loss-label">Merma de rendimiento (x0.6)</span><span class="loss-val">&#8203;</span></div>
+          <div class="loss-row"><span class="loss-label">Rotaci&oacute;n silenciosa</span><span class="loss-val">&#8203;</span></div>
+          <div class="loss-row"><span class="loss-label">Gesti&oacute;n RRHH acumulada</span><span class="loss-val">&#8203;</span></div>
+          <div class="loss-total"><span class="loss-total-label">Coste oculto anual estimado</span><span class="loss-total-val" id="calc-result">&mdash;</span></div>
+          <div class="calc-note">Estimaci&oacute;n basada en sus datos reales. La mayor&iacute;a de empresas descubren que ya est&aacute;n pagando entre 3 y 8 veces el coste del programa.</div>
+        </div>
+        <div class="pcd">Identificamos los nodos de interferencia biol&oacute;gica en la plantilla femenina que producen bajas recurrentes sin diagn&oacute;stico, rendimiento irregular y rotaci&oacute;n silenciosa. Sin an&aacute;lisis convencional que lo detecte. CAIH s&iacute; lo ve.</div>
+        <div class="pctg"><span class="ptg" style="border-color:rgba(232,184,75,.3);color:#E8B84B">Auditor&iacute;a de plantilla</span><span class="ptg" style="border-color:rgba(232,184,75,.3);color:#E8B84B">Mapa de coste oculto</span><span class="ptg" style="border-color:rgba(232,184,75,.3);color:#E8B84B">Protocolo de intervenci&oacute;n</span></div>
+        <a href="https://wa.me/34641762568?text=Hola%20Salvador%2C%20quiero%20la%20Auditor%C3%ADa%20Biosist%C3%A9mica%20de%20Plantilla%20para%20mi%20empresa%20(897%E2%82%AC%20-%20precio%20de%20lanzamiento)." target="_blank" class="wbtn" style="background:rgba(232,184,75,.12);border-color:rgba(232,184,75,.4);color:#E8B84B">Solicitar auditor&iacute;a &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- FILOSOFIA CAIH -->
+<section id="filosofia" style="background:#050C07;padding:100px 48px;border-top:1px solid rgba(232,184,75,.08)">
+  <div style="max-width:1060px;margin:0 auto">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center">
+      <div>
+        <div style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#E8B84B;font-weight:700;margin-bottom:16px">Fundamentos te&oacute;ricos</div>
+        <h2 style="font-family:Georgia,'Times New Roman',serif;font-size:clamp(30px,4vw,52px);line-height:1.12;letter-spacing:-.01em;margin-bottom:20px">La filosof&iacute;a<br>que sustenta <em style="font-style:italic;color:#FFD94A">CAIH</em>.</h2>
+        <p style="font-size:16px;line-height:1.75;color:rgba(255,248,235,.80);font-family:Georgia,serif;margin-bottom:32px">CAIH no parte de cero. Se asienta sobre d&eacute;cadas de investigaci&oacute;n cient&iacute;fica y m&eacute;dica que la medicina convencional ha ignorado o marginalizado. B&eacute;champ, Hip&oacute;crates, Tennant, Wallace, Candace Pert, Hamer, Andrew Taylor Still, Frank Su&aacute;rez y Dr. Sebi &mdash; cada uno aport&oacute; una pieza del sistema.</p>
+        <button onclick="openLegal('modal-filosofia')" style="font-size:13px;letter-spacing:.09em;text-transform:uppercase;font-weight:700;padding:14px 32px;background:transparent;color:#E8B84B;border:1px solid rgba(232,184,75,.5);cursor:pointer;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;transition:all .2s" onmouseover="this.style.background='rgba(232,184,75,.1)'" onmouseout="this.style.background='transparent'">Leer la filosof&iacute;a CAIH &rarr;</button>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:rgba(245,242,235,.07)">
+        <div style="background:#050C07;padding:18px 14px;text-align:center"><div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#E8B84B;margin-bottom:6px">B&eacute;champ</div><div style="font-family:Georgia,serif;font-size:13px;color:rgba(255,248,235,.75);line-height:1.4">El terreno biol&oacute;gico</div></div>
+        <div style="background:#050C07;padding:18px 14px;text-align:center"><div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#E8B84B;margin-bottom:6px">Hip&oacute;crates</div><div style="font-family:Georgia,serif;font-size:13px;color:rgba(255,248,235,.75);line-height:1.4">La autocuraci&oacute;n</div></div>
+        <div style="background:#050C07;padding:18px 14px;text-align:center"><div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#E8B84B;margin-bottom:6px">Tennant</div><div style="font-family:Georgia,serif;font-size:13px;color:rgba(255,248,235,.75);line-height:1.4">El voltaje celular</div></div>
+        <div style="background:#050C07;padding:18px 14px;text-align:center"><div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#E8B84B;margin-bottom:6px">Wallace</div><div style="font-family:Georgia,serif;font-size:13px;color:rgba(255,248,235,.75);line-height:1.4">La mitocondria</div></div>
+        <div style="background:#050C07;padding:18px 14px;text-align:center"><div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#E8B84B;margin-bottom:6px">C. Pert</div><div style="font-family:Georgia,serif;font-size:13px;color:rgba(255,248,235,.75);line-height:1.4">Las emociones</div></div>
+        <div style="background:#050C07;padding:18px 14px;text-align:center"><div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#E8B84B;margin-bottom:6px">Hamer</div><div style="font-family:Georgia,serif;font-size:13px;color:rgba(255,248,235,.75);line-height:1.4">El conflicto</div></div>
+        <div style="background:#050C07;padding:18px 14px;text-align:center"><div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#E8B84B;margin-bottom:6px">Still</div><div style="font-family:Georgia,serif;font-size:13px;color:rgba(255,248,235,.75);line-height:1.4">Estructura y funci&oacute;n</div></div>
+        <div style="background:#050C07;padding:18px 14px;text-align:center"><div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#E8B84B;margin-bottom:6px">Su&aacute;rez</div><div style="font-family:Georgia,serif;font-size:13px;color:rgba(255,248,235,.75);line-height:1.4">El metabolismo</div></div>
+        <div style="background:#050C07;padding:18px 14px;text-align:center"><div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#E8B84B;margin-bottom:6px">Dr. Sebi</div><div style="font-family:Georgia,serif;font-size:13px;color:rgba(255,248,235,.75);line-height:1.4">El pH y la electricidad</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- TESTIMONIOS -->
+<section class="tes">
+  <div class="inn">
+    <div><div class="stag">Experiencias</div><h2 class="stit">Lo que cambia cuando<br>cambia el <em>entorno</em>.</h2></div>
+    <div class="tcg">
+      <div class="tc"><p class="tt">Llevaba a&ntilde;os yendo al m&eacute;dico y siempre me dec&iacute;an lo mismo: &ldquo;es el estr&eacute;s&rdquo;. Con Salvador entend&iacute; por primera vez <em>por qu&eacute;</em> mi cuerpo estaba as&iacute;, no solo que algo iba mal. En tres meses recuper&eacute; mi ciclo y dorm&iacute; bien por primera vez en a&ntilde;os. Eso no tiene precio.</p><div class="ta"><div class="tan">M.R., 29 a&ntilde;os</div><div class="tac">SOP &middot; Programa de 2 meses</div></div></div>
+      <div class="tc"><p class="tt">Despu&eacute;s del COVID me qued&eacute; sin energ&iacute;a para nada. Subir escaleras me dejaba agotada. Los m&eacute;dicos me dec&iacute;an que los an&aacute;lisis sal&iacute;an bien. Salvador me explic&oacute; exactamente qu&eacute; estaba pasando en mis c&eacute;lulas y c&oacute;mo solucionarlo. Ahora vivo de nuevo.</p><div class="ta"><div class="tan">L.F., 35 a&ntilde;os</div><div class="tac">Fatiga post-COVID &middot; Programa de 2 meses</div></div></div>
+      <div class="tc"><p class="tt">Lo m&aacute;s bonito fue dejar de sentirme rota. Siempre pens&eacute; que algo estaba mal en m&iacute;. Aqu&iacute; me ayudaron a ver que mi cuerpo hab&iacute;a estado respondiendo de la &uacute;nica manera que sab&iacute;a. Cambiar eso fue m&aacute;s f&aacute;cil de lo que cre&iacute;a cuando entienden lo que te pasa de verdad.</p><div class="ta"><div class="tan">A.M., 42 a&ntilde;os</div><div class="tac">Hashimoto &middot; Members&iacute;a CAIH</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="ctas" id="evaluacion">
+  <div class="ctai">
+    <div class="stag" style="text-align:center">Primer paso</div>
+    <h2 class="ctat">&iquest;D&oacute;nde perdi&oacute; tu sistema<br>su capacidad de <em>autorregularse?</em></h2>
+    <p class="ctas2">Tu cuerpo no tiene errores. Tiene datos mal configurados. Completa la evaluaci&oacute;n y Salvador Roka te env&iacute;a tu Reporte Biosist&eacute;mico personalizado.</p>
+    <div class="ctab">
+      <button class="bg2" onclick="openModal()">Iniciar auditor&iacute;a de voltaje y capas sist&eacute;micas</button>
+      <a class="bog" href="https://wa.me/34641762568?text=Hola%20Salvador%2C%20me%20pongo%20en%20contacto%20desde%20la%20web%20de%20CAIH." target="_blank">Contactar a Salvador Roka</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fi">
+    <div class="ft">
+      <div>
+        <div class="flogo">CAIH<em>&middot;</em></div>
+        <div class="ftag">Salvador Roka<br>Eti&oacute;logo &middot; Especialista en<br>Optimizaci&oacute;n Celular<br><br>Si cambias el entorno operativo<br>de un sistema biol&oacute;gico,<br>cambian sus patrones.</div>
+      </div>
+      <div class="fc"><h4>El sistema</h4><ul><li><a href="#sistema">Las 5 capas</a></li><li><a href="#metodologia">Metodolog&iacute;a</a></li><li><a href="#manifiesto">La premisa</a></li></ul></div>
+      <div class="fc"><h4>Programas</h4><ul><li><a href="#programas">Evaluaci&oacute;n 47&euro;</a></li><li><a href="#programas">Reconfiguraci&oacute;n 247&euro;</a></li><li><a href="#programas">Members&iacute;a 37&euro;/mes</a></li></ul></div>
+      <div class="fc"><h4>Contacto</h4><ul><li><a href="#" onclick="openModal();return false">Evaluaci&oacute;n gratuita</a></li><li><a href="https://wa.me/34641762568?text=Hola%20Salvador%2C%20te%20escribo%20desde%20la%20web%20de%20CAIH." target="_blank">caihoficial&#64;gmail&#46;com</a></li><li><a href="https://www.instagram.com/caih.oficial" target="_blank">@caih.oficial</a></li></ul></div>
+    </div>
+    <div class="fb">
+      <div class="fcp">&copy; 2025 CAIH &middot; Salvador Roka &mdash; Eti&oacute;logo y Especialista en Optimizaci&oacute;n Celular.</div>
+      <div class="flg"><a onclick="openLegal('modal-privacidad');return false">&#128274; Privacidad de datos</a><a onclick="openLegal('modal-conflicto');return false">&#169; Propiedad intelectual</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL FILOSOFIA -->
+<div class="mo" id="modal-filosofia" onclick="if(event.target===this)closeLegal('modal-filosofia')">
+<div class="mb" style="max-width:760px"><button class="mcl" onclick="closeLegal('modal-filosofia')">&#215;</button>
+<div class="legal-modal">
+  <div style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#E8B84B;font-weight:700;margin-bottom:12px">Fundamentos te&oacute;ricos</div>
+  <h2 style="font-family:Georgia,serif;font-size:28px;margin-bottom:28px;line-height:1.1">La filosof&iacute;a que sustenta <em style="font-style:italic;color:#FFD94A">CAIH</em></h2>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(245,242,235,.07);margin-bottom:24px">
+
+    <div style="background:#0A1410;padding:24px 22px">
+      <div style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#E8B84B;font-weight:700;margin-bottom:5px">Antoine B&eacute;champ</div>
+      <div style="font-family:Georgia,serif;font-size:16px;margin-bottom:8px;color:#fdfcf8">La teor&iacute;a del terreno</div>
+      <div style="font-size:13px;color:rgba(245,242,235,.58);line-height:1.65;margin-bottom:10px">La enfermedad surge cuando el terreno biol&oacute;gico interno pierde su equilibrio, no por la invasi&oacute;n de g&eacute;rmenes externos. Los microzimas mutan a formas patog&eacute;nicas solo cuando el entorno interno se deteriora.</div>
+      <div style="font-size:11px;color:#00C873;padding-top:8px;border-top:1px solid rgba(0,200,115,.2)">CAIH Capa 1: el entorno condiciona la expresi&oacute;n patol&oacute;gica</div>
+    </div>
+
+    <div style="background:#0A1410;padding:24px 22px">
+      <div style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#E8B84B;font-weight:700;margin-bottom:5px">Hip&oacute;crates</div>
+      <div style="font-family:Georgia,serif;font-size:16px;margin-bottom:8px;color:#fdfcf8">La autocuraci&oacute;n como principio</div>
+      <div style="font-size:13px;color:rgba(245,242,235,.58);line-height:1.65;margin-bottom:10px">El cuerpo posee una capacidad inherente de sanar. El rol del terapeuta no es eliminar la enfermedad, sino crear las condiciones para que el organismo recupere su propio orden. La enfermedad es un proceso coherente, no un error.</div>
+      <div style="font-size:11px;color:#00C873;padding-top:8px;border-top:1px solid rgba(0,200,115,.2)">CAIH: intervenimos en el entorno para restaurar la autorregulaci&oacute;n</div>
+    </div>
+
+    <div style="background:#0A1410;padding:24px 22px">
+      <div style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#E8B84B;font-weight:700;margin-bottom:5px">Jerry Tennant</div>
+      <div style="font-family:Georgia,serif;font-size:16px;margin-bottom:8px;color:#fdfcf8">El cuerpo como sistema el&eacute;ctrico</div>
+      <div style="font-size:13px;color:rgba(245,242,235,.58);line-height:1.65;margin-bottom:10px">Cada c&eacute;lula opera a un voltaje de membrana espec&iacute;fico que determina su capacidad de regenerarse. Cuando ese voltaje cae, la funci&oacute;n celular se compromete y la enfermedad aparece como consecuencia del d&eacute;ficit bioel&eacute;ctrico.</div>
+      <div style="font-size:11px;color:#00C873;padding-top:8px;border-top:1px solid rgba(0,200,115,.2)">CAIH Capa 3: el voltaje de membrana es una variable cr&iacute;tica</div>
+    </div>
+
+    <div style="background:#0A1410;padding:24px 22px">
+      <div style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#E8B84B;font-weight:700;margin-bottom:5px">Douglas C. Wallace</div>
+      <div style="font-family:Georgia,serif;font-size:16px;margin-bottom:8px;color:#fdfcf8">La mitocondria como motor</div>
+      <div style="font-size:13px;color:rgba(245,242,235,.58);line-height:1.65;margin-bottom:10px">La eficiencia mitocondrial &mdash; la capacidad de producir ATP sin generar estr&eacute;s oxidativo &mdash; es el indicador m&aacute;s preciso del estado metab&oacute;lico real. Las mutaciones en el ADN mitocondrial explican gran parte del envejecimiento y las enfermedades degenerativas.</div>
+      <div style="font-size:11px;color:#00C873;padding-top:8px;border-top:1px solid rgba(0,200,115,.2)">CAIH Capa 3: la disfunci&oacute;n mitocondrial es el n&uacute;cleo metab&oacute;lico</div>
+    </div>
+
+    <div style="background:#0A1410;padding:24px 22px">
+      <div style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#E8B84B;font-weight:700;margin-bottom:5px">Candace Pert</div>
+      <div style="font-family:Georgia,serif;font-size:16px;margin-bottom:8px;color:#fdfcf8">Las emociones como qu&iacute;mica</div>
+      <div style="font-size:13px;color:rgba(245,242,235,.58);line-height:1.65;margin-bottom:10px">Los neuropéptidos son la manipulaci&oacute;n bioqu&iacute;mica de las emociones. Las emociones no ocurren solo en el cerebro: se almacenan en todo el cuerpo. La supresi&oacute;n emocional altera la comunicaci&oacute;n celular y contribuye directamente al desarrollo de enfermedad.</div>
+      <div style="font-size:11px;color:#00C873;padding-top:8px;border-top:1px solid rgba(0,200,115,.2)">CAIH Capa 1: la carga emocional es una variable estructural</div>
+    </div>
+
+    <div style="background:#0A1410;padding:24px 22px">
+      <div style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#E8B84B;font-weight:700;margin-bottom:5px">Ryke Geerd Hamer</div>
+      <div style="font-family:Georgia,serif;font-size:16px;margin-bottom:8px;color:#fdfcf8">El conflicto biol&oacute;gico</div>
+      <div style="font-size:13px;color:rgba(245,242,235,.58);line-height:1.65;margin-bottom:10px">Todo proceso patol&oacute;gico tiene una contrapartida emocional no resuelta que lo precede. El organismo expresa en el cuerpo f&iacute;sico el patr&oacute;n de adaptaci&oacute;n que el sistema nervioso dise&ntilde;&oacute; para sobrevivir a un conflicto espec&iacute;fico. El s&iacute;ntoma es coherente, no aleatorio.</div>
+      <div style="font-size:11px;color:#00C873;padding-top:8px;border-top:1px solid rgba(0,200,115,.2)">CAIH Capas 1 y 4: el attractor emocional ancla el patr&oacute;n</div>
+    </div>
+
+    <div style="background:#0A1410;padding:24px 22px">
+      <div style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#E8B84B;font-weight:700;margin-bottom:5px">Andrew Taylor Still</div>
+      <div style="font-family:Georgia,serif;font-size:16px;margin-bottom:8px;color:#fdfcf8">Estructura y funci&oacute;n son uno</div>
+      <div style="font-size:13px;color:rgba(245,242,235,.58);line-height:1.65;margin-bottom:10px">La salud no es ausencia de s&iacute;ntomas: es la expresi&oacute;n arm&oacute;nica de un sistema donde cada parte sostiene al todo. La prevenci&oacute;n, no la reacci&oacute;n, es el eje de la pr&aacute;ctica m&eacute;dica genuina. Estructura y funci&oacute;n son inseparables.</div>
+      <div style="font-size:11px;color:#00C873;padding-top:8px;border-top:1px solid rgba(0,200,115,.2)">CAIH: la integraci&oacute;n sist&eacute;mica es el objetivo de la reconfiguraci&oacute;n</div>
+    </div>
+
+    <div style="background:#0A1410;padding:24px 22px">
+      <div style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#E8B84B;font-weight:700;margin-bottom:5px">Frank Su&aacute;rez</div>
+      <div style="font-family:Georgia,serif;font-size:16px;margin-bottom:8px;color:#fdfcf8">El metabolismo como c&oacute;digo individual</div>
+      <div style="font-size:13px;color:rgba(245,242,235,.58);line-height:1.65;margin-bottom:10px">No existe una soluci&oacute;n universal para el metabolismo. Cada organismo tiene un c&oacute;digo metab&oacute;lico propio determinado por sus hormonas, su historia de estr&eacute;s y su entorno. Comprender ese c&oacute;digo antes de intervenir es la diferencia entre un protocolo que funciona y uno que fracasa.</div>
+      <div style="font-size:11px;color:#00C873;padding-top:8px;border-top:1px solid rgba(0,200,115,.2)">CAIH: el protocolo se dise&ntilde;a por individuo, nunca por diagn&oacute;stico</div>
+    </div>
+
+    <div style="background:#0A1410;padding:24px 22px">
+      <div style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#E8B84B;font-weight:700;margin-bottom:5px">Dr. Sebi</div>
+      <div style="font-family:Georgia,serif;font-size:16px;margin-bottom:8px;color:#fdfcf8">El cuerpo el&eacute;ctrico y alcalino</div>
+      <div style="font-size:13px;color:rgba(245,242,235,.58);line-height:1.65;margin-bottom:10px">El cuerpo humano es esencialmente el&eacute;ctrico. Cuando el pH interno se acidifica, la conductividad celular cae, la membrana mucosa se deteriora y la enfermedad se manifiesta. Los nutrientes procesados por las mitocondrias producen ATP &mdash; el catalizador de toda reacci&oacute;n enzim&aacute;tica.</div>
+      <div style="font-size:11px;color:#00C873;padding-top:8px;border-top:1px solid rgba(0,200,115,.2)">CAIH Capa 1: el pH y el voltaje son las primeras variables del sistema</div>
+    </div>
+
+  </div>
+
+  <!-- SÍNTESIS -->
+  <div style="border:1px solid rgba(232,184,75,.18);padding:28px;background:rgba(232,184,75,.03);margin-top:8px">
+    <div style="font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#E8B84B;font-weight:700;margin-bottom:14px;text-align:center">La s&iacute;ntesis CAIH</div>
+    <div style="font-family:Georgia,serif;font-size:17px;font-style:italic;line-height:1.65;color:rgba(245,242,235,.88);text-align:center;max-width:640px;margin:0 auto">
+      &ldquo;El cuerpo no enferma por azar ni por debilidad. Enferma porque el entorno en el que opera ha dejado de sostenerle. Cambiar ese entorno &mdash; no suprimir el s&iacute;ntoma &mdash; es la &uacute;nica intervenci&oacute;n que produce un cambio real y sostenido.&rdquo;
+    </div>
+  </div>
+</div></div></div>
+
+<!-- MODAL PRIVACIDAD -->
+<div class="mo" id="modal-privacidad" onclick="if(event.target===this)closeLegal('modal-privacidad')">
+<div class="mb" style="max-width:580px"><button class="mcl" onclick="closeLegal('modal-privacidad')">&#215;</button>
+<div class="legal-modal">
+  <div class="stag">Legal</div>
+  <h2 class="stit" style="font-size:24px;margin-bottom:18px">Pol&iacute;tica de <em>privacidad</em></h2>
+  <h3>1. Responsable</h3><p>Salvador Roka &middot; CAIH &mdash; Centro de Alta Integraci&oacute;n Humana. Contacto: caihoficial&#64;gmail&#46;com</p>
+  <h3>2. Datos que recopilamos</h3><p>Nombre, direcci&oacute;n de correo electr&oacute;nico y respuestas al cuestionario biosist&eacute;mico proporcionados voluntariamente. No recopilamos datos sensibles de salud en bases de datos externas ni cedemos datos a terceros.</p>
+  <h3>3. Finalidad</h3><p>Exclusivamente la prestaci&oacute;n del servicio de evaluaci&oacute;n biosist&eacute;mica y el env&iacute;o del Reporte de Interpretaci&oacute;n Biosist&eacute;mica al usuario.</p>
+  <h3>4. Base legal</h3><p>Consentimiento expreso del usuario al completar y enviar el formulario de evaluaci&oacute;n.</p>
+  <h3>5. Derechos del usuario</h3><p>Puedes ejercer tus derechos de acceso, rectificaci&oacute;n y supresi&oacute;n escribiendo a caihoficial&#64;gmail&#46;com. Tienes derecho a reclamar ante la Agencia Espa&ntilde;ola de Protecci&oacute;n de Datos (aepd.es).</p>
+  <h3>6. Cookies</h3><p>Esta web no utiliza cookies de rastreo ni anal&iacute;tica de terceros.</p>
+</div></div></div>
+
+<!-- MODAL CONFLICTO -->
+<div class="mo" id="modal-conflicto" onclick="if(event.target===this)closeLegal('modal-conflicto')">
+<div class="mb" style="max-width:580px"><button class="mcl" onclick="closeLegal('modal-conflicto')">&#215;</button>
+<div class="legal-modal">
+  <div class="stag">Legal</div>
+  <h2 class="stit" style="font-size:24px;margin-bottom:18px">Propiedad intelectual &amp; <em style="font-style:italic;color:#FFD94A">protecci&oacute;n de la idea de negocio</em></h2><p style="font-size:13px;color:rgba(245,242,235,.4);font-family:Georgia,serif;font-style:italic;margin:6px 0 18px">Derechos sobre el modelo CAIH y la propiedad intelectual del sistema de 5 capas</p>
+  <h3>1. Propiedad intelectual</h3><p>Todo el contenido de esta web &mdash; el modelo de 5 capas del sistema operativo biol&oacute;gico, el Reporte de Interpretaci&oacute;n Biosist&eacute;mica, los protocolos de intervenci&oacute;n y el material educativo &mdash; es propiedad intelectual exclusiva de Salvador Roka y CAIH. Queda expresamente prohibida su reproducci&oacute;n total o parcial con fines comerciales sin autorizaci&oacute;n escrita previa.</p>
+  <h3>2. Ausencia de conflicto de inter&eacute;s</h3><p>Salvador Roka declara no mantener relaciones comerciales con empresas farmac&eacute;uticas, laboratorios de suplementaci&oacute;n ni ning&uacute;n proveedor cuya menci&oacute;n pudiera generar un conflicto de inter&eacute;s en los protocolos de CAIH.</p>
+  <h3>3. Limitaci&oacute;n de responsabilidad</h3><p>El contenido de esta web tiene car&aacute;cter educativo e informativo. No constituye diagn&oacute;stico m&eacute;dico ni sustituye la consulta con un profesional de la salud habilitado.</p>
+</div></div></div>
+
+<!-- MODAL FORMULARIO -->
+<div class="mo" id="modal" onclick="if(event.target===this)closeModal()">
+<div class="mb">
+  <button class="mcl" onclick="closeModal()">&#215;</button>
+  <div class="fmpr"><div class="fmpb"><div class="fmpf" id="fm-prog"></div></div><div class="fmpm"><span id="fm-lbl">Paso 1 de 12</span><span id="fm-pct">0%</span></div></div>
+  <div class="fmh"><div class="fmey" id="fm-ey">Identificaci&oacute;n del sistema</div><div class="fmtl" id="fm-tl">&iquest;C&oacute;mo te llamas?</div><div class="fmds" id="fm-ds">Personalizamos la evaluaci&oacute;n con tu nombre.</div></div>
+  <div class="fmbody">
+    <div class="fmsec active" id="fs0"><div class="fmqt">Tu nombre</div><input class="fmin" id="fm-nombre" placeholder="Escribe tu nombre..." autocomplete="off"></div>
+    <div class="fmsec" id="fs1"><div class="fmqt">Qu&eacute; s&iacute;ntoma o situaci&oacute;n te trajo aqu&iacute;?</div><textarea class="fmin" id="fm-motivo" placeholder="Ej: fatiga cr&oacute;nica, ciclos irregulares, ansiedad..."></textarea></div>
+    <div class="fmsec" id="fs2"><div class="fmqt">Desde cu&aacute;ndo presenta el sistema esta configuraci&oacute;n?</div><div class="fmop c1"><button class="fmo" onclick="fmSel(this);fmAuto()">A &nbsp; Menos de 3 meses</button><button class="fmo" onclick="fmSel(this);fmAuto()">B &nbsp; 3 a 12 meses</button><button class="fmo" onclick="fmSel(this);fmAuto()">C &nbsp; 1 a 3 a&ntilde;os</button><button class="fmo" onclick="fmSel(this);fmAuto()">D &nbsp; M&aacute;s de 3 a&ntilde;os</button></div></div>
+    <div class="fmsec" id="fs3"><div class="fmqt">&iquest;Sientes que repites reacciones o h&aacute;bitos que ya no te funcionan, pero te es f&iacute;sicamente imposible cambiarlos?</div><div class="fmei" style="font-size:11px;color:rgba(232,184,75,.6);font-style:italic;margin-bottom:14px;line-height:1.5">CAIH: Tu sistema ha aprendido que esa configuraci&oacute;n es &ldquo;suficientemente buena&rdquo; para sobrevivir y no quiere gastar energ&iacute;a en recalcular.</div><div class="fmop c1"><button class="fmo" onclick="fmVar(this,0,0,90);fmAuto()">A &nbsp; No, puedo ajustar mis reacciones con relativa facilidad</button><button class="fmo" onclick="fmVar(this,0,0,62);fmAuto()">B &nbsp; A veces, pero logro modificarlos con esfuerzo</button><button class="fmo" onclick="fmVar(this,0,0,35);fmAuto()">C &nbsp; Frecuentemente &mdash; siento que lucho contra m&iacute; mismo/a</button><button class="fmo" onclick="fmVar(this,0,0,12);fmAuto()">D &nbsp; S&iacute; &mdash; me es imposible aunque sepa que me da&ntilde;an</button></div></div>
+    <div class="fmsec" id="fs4"><div class="fmqt">&iquest;Sientes que tus reacciones emocionales son desproporcionadas al evento, como si un peque&ntilde;o roce activara una descarga el&eacute;ctrica masiva?</div><div class="fmei" style="font-size:11px;color:rgba(232,184,75,.6);font-style:italic;margin-bottom:14px;line-height:1.5">CAIH: Existe un potencial el&eacute;ctrico no cerrado. El sistema descarga acumulativamente porque no sabe procesar la intensidad actual.</div><div class="fmop c1"><button class="fmo" onclick="fmVar(this,0,1,90);fmAuto()">A &nbsp; No, mis reacciones son proporcionales al est&iacute;mulo</button><button class="fmo" onclick="fmVar(this,0,1,62);fmAuto()">B &nbsp; A veces en situaciones de mucha presi&oacute;n</button><button class="fmo" onclick="fmVar(this,0,1,35);fmAuto()">C &nbsp; Con frecuencia &mdash; me sorprende mi propia intensidad</button><button class="fmo" onclick="fmVar(this,0,1,12);fmAuto()">D &nbsp; S&iacute; &mdash; reacciones explosivas o colapsos ante cosas m&iacute;nimas</button></div></div>
+    <div class="fmsec" id="fs5"><div class="fmqt">&iquest;Te encuentras repitiendo conductas que sabes que te da&ntilde;an, pero sientes que &ldquo;luchar&rdquo; contra ellas te agota m&aacute;s que hacerlas?</div><div class="fmei" style="font-size:11px;color:rgba(232,184,75,.6);font-style:italic;margin-bottom:14px;line-height:1.5">CAIH: El sistema ha establecido esa conducta como el atractor m&aacute;s eficiente. No es falta de voluntad, es fricci&oacute;n homeost&aacute;tica.</div><div class="fmop c1"><button class="fmo" onclick="fmVar(this,1,0,90);fmAuto()">A &nbsp; No, puedo renunciar a conductas da&ntilde;inas sin coste excesivo</button><button class="fmo" onclick="fmVar(this,1,0,62);fmAuto()">B &nbsp; A veces me cuesta pero lo consigo</button><button class="fmo" onclick="fmVar(this,1,0,35);fmAuto()">C &nbsp; Frecuentemente &mdash; el esfuerzo de cambiar me agota m&aacute;s</button><button class="fmo" onclick="fmVar(this,1,0,12);fmAuto()">D &nbsp; S&iacute; &mdash; es m&aacute;s f&aacute;cil seguir el patr&oacute;n aunque me destruya</button></div></div>
+    <div class="fmsec" id="fs6"><div class="fmqt">&iquest;Tienes ansiedad, irritabilidad o apat&iacute;a que aparecen sin que haya pasado nada malo en tu d&iacute;a?</div><div class="fmei" style="font-size:11px;color:rgba(232,184,75,.6);font-style:italic;margin-bottom:14px;line-height:1.5">CAIH: No es psicol&oacute;gico, es input corrupto. La inflamaci&oacute;n o la microbiota alterada env&iacute;an se&ntilde;ales que tu cerebro interpreta como amenaza existencial.</div><div class="fmop c1"><button class="fmo" onclick="fmVar(this,1,2,90);fmAuto()">A &nbsp; No, mi estado emocional tiene siempre una causa identificable</button><button class="fmo" onclick="fmVar(this,1,2,65);fmAuto()">B &nbsp; Rara vez, en per&iacute;odos de mucho estr&eacute;s</button><button class="fmo" onclick="fmVar(this,1,2,35);fmAuto()">C &nbsp; Con frecuencia &mdash; aparece de la nada</button><button class="fmo" onclick="fmVar(this,1,2,12);fmAuto()">D &nbsp; A diario &mdash; mi estado basal es irritabilidad o vac&iacute;o sin causa</button></div></div>
+    <div class="fmsec" id="fs7"><div class="fmqt">&iquest;Sufres de antojos incontrolables por az&uacute;car, irritabilidad repentina o una &ldquo;niebla mental&rdquo; que te impide concentrarte?</div><div class="fmei" style="font-size:11px;color:rgba(232,184,75,.6);font-style:italic;margin-bottom:14px;line-height:1.5">CAIH: Los par&aacute;sitos o bacterias oportunistas alteran la neuroquímica y el pH intestinal, enviando se&ntilde;ales que el cerebro interpreta como ansiedad o compulsi&oacute;n.</div><div class="fmop c1"><button class="fmo" onclick="fmVar(this,2,2,90);fmAuto()">A &nbsp; No, tengo claridad mental estable y no tengo antojos</button><button class="fmo" onclick="fmVar(this,2,2,62);fmAuto()">B &nbsp; Ocasionalmente, en momentos de cansancio</button><button class="fmo" onclick="fmVar(this,2,2,35);fmAuto()">C &nbsp; Frecuente &mdash; niebla mental y antojos habituales</button><button class="fmo" onclick="fmVar(this,2,2,12);fmAuto()">D &nbsp; A diario &mdash; no puedo funcionar sin az&uacute;car y la mente no conecta</button></div></div>
+    <div class="fmsec" id="fs8"><div class="fmqt">&iquest;Sientes que tu cuerpo no tiene &ldquo;bater&iacute;a&rdquo;, incluso despu&eacute;s de descansar?</div><div class="fmei" style="font-size:11px;color:rgba(232,184,75,.6);font-style:italic;margin-bottom:14px;line-height:1.5">CAIH: Tus c&eacute;lulas han perdido voltaje por falta de ox&iacute;geno (hipoxia) y un pH &aacute;cido. Est&aacute;n en modo supervivencia, no en modo regeneraci&oacute;n.</div><div class="fmop c1"><button class="fmo" onclick="fmVar(this,2,1,90);fmAuto()">A &nbsp; No, me recupero bien y tengo energ&iacute;a estable</button><button class="fmo" onclick="fmVar(this,2,1,65);fmAuto()">B &nbsp; Algo de fatiga pero dentro de lo normal</button><button class="fmo" onclick="fmVar(this,2,1,38);fmAuto()">C &nbsp; Me despierto cansada y necesito tiempo para arrancar</button><button class="fmo" onclick="fmVar(this,2,1,14);fmAuto()">D &nbsp; Agotamiento profundo &mdash; no importa cu&aacute;nto duerma</button></div></div>
+    <div class="fmsec" id="fs9"><div class="fmqt">&iquest;Tus ciclos menstruales vienen acompa&ntilde;ados de co&aacute;gulos, dolor severo o sangrados muy oscuros?</div><div class="fmei" style="font-size:11px;color:rgba(232,184,75,.6);font-style:italic;margin-bottom:14px;line-height:1.5">CAIH: Se&ntilde;al de dominancia estrog&eacute;nica e inflamaci&oacute;n cr&oacute;nica. El h&iacute;gado no metaboliza bien las hormonas por el entorno &aacute;cido.</div><div class="fmop c1"><button class="fmo" onclick="fmVar(this,3,1,90);fmAuto()">A &nbsp; No &mdash; ciclo fluido, rojo vivo y sin dolor incapacitante</button><button class="fmo" onclick="fmVar(this,3,1,62);fmAuto()">B &nbsp; Leve molestia y color normal &mdash; desequilibrio leve</button><button class="fmo" onclick="fmVar(this,3,1,35);fmAuto()">C &nbsp; S&iacute; &mdash; co&aacute;gulos, color oscuro o dolor moderado</button><button class="fmo" onclick="fmVar(this,3,1,12);fmAuto()">D &nbsp; Dolor severo, hemorragia o ciclos muy irregulares &mdash; sistema en alerta</button></div></div>
+    <div class="fmsec" id="fs10"><div class="fmqt">&iquest;Ante un conflicto te quedas &ldquo;en blanco&rdquo;, te desconectas de tu cuerpo o sientes que tu mente se va a otro lado? &iquest;O reaccionas con la intensidad emocional de un ni&ntilde;o/a?</div><div class="fmei" style="font-size:11px;color:rgba(232,184,75,.6);font-style:italic;margin-bottom:14px;line-height:1.5">CAIH: Colapso del parasimpatico o activaci&oacute;n de circuito antiguo. El trauma fij&oacute; un patr&oacute;n auton&oacute;mico que el sistema activa &iacute;ntegro ante el estr&eacute;s.</div><div class="fmop c1"><button class="fmo" onclick="fmVar(this,3,3,90);fmAuto()">A &nbsp; No &mdash; permanezco presente y respondo desde mi edad actual</button><button class="fmo" onclick="fmVar(this,3,3,62);fmAuto()">B &nbsp; A veces me bloqueo brevemente pero me recupero</button><button class="fmo" onclick="fmVar(this,3,3,35);fmAuto()">C &nbsp; Frecuente &mdash; disociaci&oacute;n o reacciones infantiles ante conflicto</button><button class="fmo" onclick="fmVar(this,3,3,12);fmAuto()">D &nbsp; S&iacute; &mdash; me quedo en blanco o exploto como si tuviera 8 a&ntilde;os</button></div></div>
+    <div class="fmsec" id="fs11"><div class="fmqt">A qu&eacute; email enviamos tu evaluaci&oacute;n?</div><p style="font-size:12px;color:rgba(245,242,235,.34);margin-bottom:12px;font-family:var(--serif);font-style:italic">Salvador Roka te enviar&aacute; el Reporte Biosist&eacute;mico personalizado en las pr&oacute;ximas 24 horas.</p><input class="fmin" id="fm-email" type="email" placeholder="tu@email.com" autocomplete="email"></div>
+  </div>
+  <div class="fmnav" id="fm-nav">
+    <button class="fmbck" id="fm-back" onclick="fmPrev()" style="visibility:hidden">&#8592; Anterior</button>
+    <button class="fmbtn" id="fm-next" onclick="fmNext()">Continuar &#8594;</button>
+    <span class="fmhnt">Pulsa Enter</span>
+  </div>
+  <div class="fmld" id="fm-load">
+    <div class="ldring"></div>
+    <div class="ldtxt">Procesando tu evaluaci&oacute;n&hellip;</div>
+    <div class="ldsub">Salvador Roka recibir&aacute; tu perfil biol&oacute;gico completo</div>
+    <div class="ldsteps">
+      <div class="ldi"><div class="ldd" id="ld0"></div>Calibrando variables del entorno</div>
+      <div class="ldi"><div class="ldd" id="ld1"></div>Evaluando regulaci&oacute;n sist&eacute;mica</div>
+      <div class="ldi"><div class="ldd" id="ld2"></div>Calculando eficiencia metab&oacute;lica</div>
+      <div class="ldi"><div class="ldd" id="ld3"></div>Mapeando expresi&oacute;n fenot&iacute;pica</div>
+      <div class="ldi"><div class="ldd" id="ld4"></div>Enviando a Salvador Roka</div>
+    </div>
+  </div>
+  <div id="fm-report" style="display:none"></div>
+</div>
+</div>
+
+<script>
+/* NAV */
+window.addEventListener('scroll',function(){document.getElementById('nav').classList.toggle('sc',window.scrollY>60);});
+
+
+
+/* MODALS */
+function openModal(){
+  var m=document.getElementById('modal');
+  m.style.display='flex';
+  m.classList.add('open');
+  document.body.style.overflow='hidden';
+  try{fmReset();}catch(e){console.log('fmReset error:',e);}
+}
+function closeModal(){
+  var m=document.getElementById('modal');
+  m.classList.remove('open');
+  m.style.display='none';
+  document.body.style.overflow='';
+}
+function openLegal(id){
+  var m=document.getElementById(id);
+  m.classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeLegal(id){
+  var m=document.getElementById(id);
+  m.classList.remove('open');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape'){closeModal();closeLegal('modal-privacidad');closeLegal('modal-conflicto');closeLegal('modal-filosofia');}
+  if(e.key==='Enter'){var a=document.activeElement;if(a&&(a.id==='fm-nombre'||a.id==='fm-email'))fmNext();}
+});
+
+/* FORM */
+var fmStep=0,fmScores={},fmData={};
+var fmTitles=['\u00bfC\u00f3mo te llamas?','Qu\u00e9 s\u00edntoma te trajo aqu\u00ed','Desde cu\u00e1ndo presenta el sistema esta configuraci\u00f3n','Fase 1 \u00b7 Identificaci\u00f3n de atractores','Fase 1 \u00b7 Potencial el\u00e9ctrico no cerrado','Fase 1 \u00b7 Fricci\u00f3n homeost\u00e1tica','Fase 2 \u00b7 Ruido biol\u00f3gico','Fase 2 \u00b7 Disbiosis e inflamaci\u00f3n','Fase 3 \u00b7 Terreno biol\u00f3gico','Fase 3 \u00b7 Ciclo y terreno hormonal','Fase 4 \u00b7 Tiempo interno','Entrega de la evaluaci\u00f3n'];
+function fmReset(){fmStep=0;fmScores={};fmData={};fmUI();fmShow(0);document.getElementById('fm-report').style.display='none';document.getElementById('fm-load').classList.remove('show');document.getElementById('fm-nav').style.display='';}
+function fmUI(){
+  var p=Math.round(fmStep/12*100);
+  document.getElementById('fm-prog').style.width=p+'%';
+  document.getElementById('fm-pct').textContent=p+'%';
+  document.getElementById('fm-lbl').textContent='Paso '+(fmStep+1)+' de 12';
+  document.getElementById('fm-ey').textContent='Pregunta '+(fmStep+1)+' de 12';
+  document.getElementById('fm-tl').textContent=fmTitles[fmStep]||'';
+  document.getElementById('fm-back').style.visibility=fmStep>0?'visible':'hidden';
+  document.getElementById('fm-next').textContent=fmStep===11?'Enviar evaluaci\u00f3n \u2192':'Continuar \u2192';
+}
+function fmShow(n){
+  for(var i=0;i<12;i++){var s=document.getElementById('fs'+i);if(s)s.classList.toggle('active',i===n);}
+  fmStep=n;fmUI();
+  var box=document.querySelector('#modal .mb');if(box)box.scrollTop=0;
+}
+function fmNext(){
+  if(fmStep===0){fmData.nombre=document.getElementById('fm-nombre').value||'Paciente';fmShow(1);}
+  else if(fmStep===1){fmData.motivo=document.getElementById('fm-motivo').value||'';fmShow(2);}
+  else if(fmStep===11){fmData.email=document.getElementById('fm-email').value||'';fmGen();}
+  else{fmShow(fmStep+1);}
+}
+function fmPrev(){if(fmStep>0)fmShow(fmStep-1);}
+function fmSel(btn){btn.closest('.fmop').querySelectorAll('.fmo').forEach(function(b){b.classList.remove('sg','sa','sr');});btn.classList.add('sg');}
+function fmVar(btn,l,v,s){
+  btn.closest('.fmop').querySelectorAll('.fmo').forEach(function(b){b.classList.remove('sg','sa','sr');});
+  btn.classList.add(s>=65?'sg':s>=35?'sa':'sr');
+  var k='l'+l+'v'+v;if(!fmScores[k])fmScores[k]=[];fmScores[k].push(s);
+}
+function fmAuto(){setTimeout(fmNext,300);}
+function fmGet(l,v){var k='l'+l+'v'+v,a=fmScores[k];if(!a||!a.length)return 65;return Math.round(a.reduce(function(x,y){return x+y;},0)/a.length);}
+
+function fmGen(){
+  document.getElementById('fm-nav').style.display='none';
+  for(var i=0;i<12;i++){var s=document.getElementById('fs'+i);if(s)s.classList.remove('active');}
+  document.getElementById('fm-load').classList.add('show');
+  ['ld0','ld1','ld2','ld3','ld4'].forEach(function(id,i){setTimeout(function(){var d=document.getElementById(id);if(d)d.classList.add('done');},(i+1)*460);});
+
+  var ll=[];
+  for(var l=0;l<4;l++){
+    var vs=[];for(var v=0;v<4;v++)vs.push(fmGet(l,v));
+    var raw=Math.round(vs.reduce(function(a,b){return a+b;},0)/4);
+    var pen=raw;if(l>0&&ll[l-1]<60)pen=Math.max(0,raw-Math.round((60-ll[l-1])*.45));
+    ll.push(pen);
+  }
+  var gl=Math.round(ll.reduce(function(a,b){return a+b;},0)/4);
+  var sx=Math.max(0,100-gl);
+  var fmN=['Identificaci\u00f3n de atractores (Patrones)','Ruido biol\u00f3gico (Inflamaci\u00f3n\/Par\u00e1sitos)','Evaluaci\u00f3n del terreno (pH\/Voltaje)','Tiempo interno (Trauma\/SNA)'];
+  var ff=ll.findIndex(function(s){return s<60;});
+  var rid='RIB-2025-'+String(Math.floor(Math.random()*99999)).padStart(5,'0');
+  var nombre=fmData.nombre, email=fmData.email||'';
+
+  /* Formspree submit */
+  var fd=new FormData();
+  fd.append('nombre',nombre);fd.append('email',email);fd.append('motivo',fmData.motivo||'');
+  fd.append('diagnostico',ff>=0?'Capa '+(ff+1)+' - '+fmN[ff]:'Coherencia biologica');
+  fd.append('indice-global',String(gl));fd.append('presion-sintomatica',String(sx));
+  fd.append('capa1-ph',String(fmGet(0,0)));fd.append('capa1-emocion',String(fmGet(0,1)));
+  fd.append('capa2-sna',String(fmGet(1,0)));fd.append('capa2-cortisol',String(fmGet(1,2)));
+  fd.append('capa3-atp',String(fmGet(2,2)));fd.append('capa3-oxigeno',String(fmGet(2,1)));
+  fd.append('capa4-hormonal',String(fmGet(3,1)));fd.append('capa4-plasticidad',String(fmGet(3,3)));
+  fetch('https://formspree.io/f/FORMSPREE_ID',{method:'POST',body:fd,headers:{'Accept':'application/json'}}).catch(function(){});
+
+  setTimeout(function(){
+    document.getElementById('fm-load').classList.remove('show');
+    var wa1='https://wa.me/34641762568?text=Hola%20Salvador%2C%20quiero%20la%20Evaluaci%C3%B3n%20del%20Sistema%20(47%E2%82%AC).%20Ref%3A%20'+rid;
+    var wa2='https://wa.me/34641762568?text=Hola%20Salvador%2C%20quiero%20la%20Reconfiguraci%C3%B3n%20Sist%C3%A9mica%202%20meses%20(137%E2%82%AC%20-%20precio%20de%20lanzamiento).%20Ref%3A%20'+rid;
+    var wa3='https://wa.me/34641762568?text=Hola%20Salvador%2C%20quiero%20la%20Members%C3%ADa%20CAIH%20(97%E2%82%AC%2Fmes).%20Ref%3A%20'+rid;
+    var wa4='https://wa.me/34641762568?text=Hola%20Salvador%2C%20quiero%20la%20Auditor%C3%ADa%20Biosist%C3%A9mica%20de%20Plantilla%20(326%E2%82%AC).%20Ref%3A%20'+rid;
+    var rp=document.getElementById('fm-report');
+    rp.style.display='block';
+    rp.innerHTML=
+      '<div style="padding:32px;text-align:center">'
+      +'<div style="width:52px;height:52px;border-radius:50%;background:rgba(0,200,115,.15);border:1px solid rgba(0,200,115,.4);display:flex;align-items:center;justify-content:center;margin:0 auto 18px">'
+      +'<svg viewBox="0 0 24 24" width="22" height="22" stroke="#00C873" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>'
+      +'<div style="font-family:Georgia,serif;font-size:24px;color:#fdfcf8;margin-bottom:10px">'+nombre+', tu evaluaci\u00f3n ha sido recibida.</div>'
+      +'<div style="font-family:Georgia,serif;font-size:15px;font-style:italic;color:rgba(255,248,235,.75);line-height:1.7;max-width:380px;margin:0 auto 8px">'
+      +'Salvador Roka preparar\u00e1 tu Reporte Biosist\u00e9mico personalizado \u2014 dise\u00f1ado para el sistema biol\u00f3gico femenino \u2014 y te lo enviar\u00e1 en las pr\u00f3ximas 24 horas a</div>'
+      +'<div style="font-size:14px;color:rgba(232,184,75,.85);margin-bottom:6px">'+email+'</div>'
+      +'<div style="font-size:11px;color:rgba(245,242,235,.26);font-family:monospace;margin-bottom:28px">'+rid+'</div>'
+      +'<div style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(232,184,75,.52);margin-bottom:14px">Elige tu programa</div>'
+      +'<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:left">'
+      +'<a href="'+wa1+'" target="_blank" style="display:block;padding:14px;border:1px solid rgba(245,242,235,.12);text-decoration:none;transition:border-color .15s" onmouseover="this.style.borderColor=\'rgba(0,200,115,.4)\'" onmouseout="this.style.borderColor=\'rgba(245,242,235,.12)\'">'
+      +'<div style="font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,242,235,.32);margin-bottom:7px">Programa 01</div>'
+      +'<div style="font-family:Georgia,serif;font-size:15px;color:#fdfcf8;margin-bottom:8px">Evaluaci\u00f3n</div>'
+      +'<div style="font-size:11px;text-decoration:line-through;color:rgba(245,242,235,.28);margin-bottom:2px">197 EUR</div><div style="font-size:20px;font-weight:700;color:#00E87C;margin-bottom:8px">GRATIS</div>'
+      +'<div style="font-size:11px;color:#00C873">WhatsApp \u2192</div></a>'
+      +'<a href="'+wa2+'" target="_blank" style="display:block;padding:14px;border:1px solid rgba(0,200,115,.35);background:rgba(13,122,78,.06);text-decoration:none;transition:border-color .15s" onmouseover="this.style.borderColor=\'rgba(0,200,115,.7)\'" onmouseout="this.style.borderColor=\'rgba(0,200,115,.35)\'">'
+      +'<div style="font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#00C873;margin-bottom:7px">P02 \u2022 Popular</div>'
+      +'<div style="font-family:Georgia,serif;font-size:15px;color:#fdfcf8;margin-bottom:8px">Reconfiguraci\u00f3n</div>'
+      +'<div style="font-size:11px;text-decoration:line-through;color:rgba(245,242,235,.28);margin-bottom:2px">247 EUR</div><div style="font-size:20px;font-weight:700;color:#fdfcf8;margin-bottom:8px">137<span style="font-size:11px;color:#E8B84B;font-weight:400"> EUR</span></div>'
+      +'<div style="font-size:11px;color:#00C873">WhatsApp \u2192</div></a>'
+      +'<a href="'+wa3+'" target="_blank" style="display:block;padding:14px;border:1px solid rgba(245,242,235,.12);text-decoration:none;transition:border-color .15s" onmouseover="this.style.borderColor=\'rgba(232,184,75,.4)\'" onmouseout="this.style.borderColor=\'rgba(245,242,235,.12)\'">'
+      +'<div style="font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,242,235,.32);margin-bottom:7px">Programa 03</div>'
+      +'<div style="font-family:Georgia,serif;font-size:15px;color:#fdfcf8;margin-bottom:8px">Membersía</div>'
+      +'<div style="font-size:20px;font-weight:700;color:#fdfcf8;margin-bottom:8px">37<span style="font-size:11px;color:#E8B84B;font-weight:400"> EUR/mes</span></div>'
+      +'<div style="font-size:11px;color:#E8B84B">WhatsApp →</div></a>'
+      +'<a href="'+wa4+'" target="_blank" style="display:block;padding:14px;border:1px solid rgba(232,184,75,.3);text-decoration:none;transition:border-color .15s;margin-top:8px" onmouseover="this.style.borderColor=\'rgba(232,184,75,.6)\'" onmouseout="this.style.borderColor=\'rgba(232,184,75,.3)\'">'+'<div style="font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(232,184,75,.6);margin-bottom:7px">Programa 04 — Empresas</div>'+'<div style="font-family:Georgia,serif;font-size:15px;color:#fdfcf8;margin-bottom:8px">Auditor&iacute;a de plantilla</div>'+'<div style="font-size:11px;text-decoration:line-through;color:rgba(245,242,235,.25);margin-bottom:2px">2.200 EUR</div>'+'<div style="font-size:20px;font-weight:700;color:#E8B84B;margin-bottom:8px">326<span style="font-size:11px;color:#E8B84B;font-weight:400"> EUR</span></div>'+'<div style="font-size:11px;color:#E8B84B">WhatsApp &rarr;</div></a>'+'</div></div>';
+  },2600);
+}
+
+/* ANIMATED BACKGROUND CANVAS */
+(function(){
+  var c=document.getElementById('bg-canvas');
+  if(!c)return;
+  var ctx=c.getContext('2d');
+  var W,H,pts=[];
+  function resize(){W=c.width=c.offsetWidth;H=c.height=c.offsetHeight;init();}
+  function init(){
+    pts=[];
+    var n=Math.floor(W*H/18000);
+    for(var i=0;i<n;i++){
+      pts.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4,r:Math.random()*2+1,a:Math.random()*.6+.1});
+    }
+  }
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    // Background gradient
+    var g=ctx.createRadialGradient(W*.7,H*.4,0,W*.7,H*.4,W*.7);
+    g.addColorStop(0,'rgba(13,122,78,.22)');
+    g.addColorStop(.5,'rgba(11,11,9,.0)');
+    g.addColorStop(1,'rgba(11,11,9,.0)');
+    ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
+    var g2=ctx.createRadialGradient(W*.15,H*.7,0,W*.15,H*.7,W*.4);
+    g2.addColorStop(0,'rgba(232,184,75,.1)');
+    g2.addColorStop(1,'rgba(11,11,9,.0)');
+    ctx.fillStyle=g2;ctx.fillRect(0,0,W,H);
+    // Move and draw particles
+    for(var i=0;i<pts.length;i++){
+      var p=pts[i];
+      p.x+=p.vx;p.y+=p.vy;
+      if(p.x<0)p.x=W;if(p.x>W)p.x=0;
+      if(p.y<0)p.y=H;if(p.y>H)p.y=0;
+      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle='rgba(232,184,75,'+p.a+')';ctx.fill();
+      // Connect nearby particles
+      for(var j=i+1;j<pts.length;j++){
+        var q=pts[j];
+        var dx=p.x-q.x,dy=p.y-q.y,d=Math.sqrt(dx*dx+dy*dy);
+        if(d<90){
+          ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);
+          ctx.strokeStyle='rgba(0,200,115,'+((.9-d/90)*.12)+')';
+          ctx.lineWidth=.6;ctx.stroke();
+        }
+      }
+    }
+    requestAnimationFrame(draw);
+  }
+  window.addEventListener('resize',resize);
+  resize();draw();
+})();
+
+/* SCROLL ANIMATIONS */
+(function(){
+  var els=document.querySelectorAll('.slide-up,.slide-left,.slide-right,.scale-in');
+  if(!els.length)return;
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('anim');io.unobserve(e.target);}
+    });
+  },{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(el){io.observe(el);});
+  // Safety: show everything after 1.5s in case JS/IO fails
+  setTimeout(function(){
+    els.forEach(function(el){el.classList.add('anim');});
+  },1500);
+})();
+
+/* CARD MOUSE GLOW */
+document.querySelectorAll('.pc').forEach(function(card){
+  card.addEventListener('mousemove',function(e){
+    var r=card.getBoundingClientRect();
+    var x=((e.clientX-r.left)/r.width*100).toFixed(1);
+    var y=((e.clientY-r.top)/r.height*100).toFixed(1);
+    card.style.setProperty('--mx',x+'%');
+    card.style.setProperty('--my',y+'%');
+  });
+});
+
+
+</script>
+</body>
+</html>
